@@ -73,6 +73,9 @@ var InitDemo = function () {
     }
 
 // Create Graphics Pipeline
-    var program =
+    var program = gl.createProgram();
+    gl.attachShader(program, vertexShader);
+    gl.attachShader(program, fragmentShader);
+    gl.linkProgram(program);
 
 };
