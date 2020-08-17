@@ -77,5 +77,9 @@ var InitDemo = function () {
     gl.attachShader(program, vertexShader);
     gl.attachShader(program, fragmentShader);
     gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)){
+        console.error('ERROR linking program pipeline', gl.getProgramInfoLog(program));
+        return;
+    }
 
 };
