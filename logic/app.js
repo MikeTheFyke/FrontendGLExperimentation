@@ -82,4 +82,10 @@ var InitDemo = function () {
         return;
     }
 
+    gl.validateProgram(program);
+    if (!gl.getProgramParameter(program, gl.VALIDATE_STATUS)){
+        console.error('ERROR validating program!, gl.getProgramInfoLog(program)');
+        return;
+    }
+
 };
