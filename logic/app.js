@@ -113,4 +113,10 @@ var InitDemo = function () {
     );
 
     gl.enableVertexAttribArray(positionAttribLocation);
+
+// Main Render Loop
+    gl.useProgram(program);
+    // 3 Parameters 1. What to draw, 2. How many vertex to skip, 3. How many vertices to draw
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+
 };
