@@ -53,7 +53,7 @@ var InitDemo = function () {
     //     };
     // };
 
-    // Create Shaders
+// Create Shaders Components
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
     var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
 
@@ -71,5 +71,8 @@ var InitDemo = function () {
         console.error('ERROR compiling fragment shader!', gl.getShaderInfoLog(fragmentShader));
         return;
     }
+
+// Create Graphics Pipeline
+    var program =
 
 };
