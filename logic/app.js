@@ -1,3 +1,15 @@
+var vertexShaderText =
+[
+'precision mediump float;',
+'',
+'attribute vec2 vertPosition;',
+'',
+'void main()',
+'{',
+' gl_Position = vec4(vertPosition, 0.0, 1.0);',
+'}'
+].join('\n');
+
 var InitDemo = function () {
     console.log('Demo is initializing');
 
@@ -25,10 +37,7 @@ var InitDemo = function () {
     // function vertexShader(vertPosition, vertColor) {
     //     return {
     //         fragColor : vertColor,
-    //         gl_position : [vertPosition.x, vertPosition.y, 0.0, 1.0]
+    //         gl_Position : [vertPosition.x, vertPosition.y, 0.0, 1.0]
     //     };
     // };
-
-
-    
 };
