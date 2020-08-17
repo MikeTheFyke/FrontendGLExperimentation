@@ -88,4 +88,19 @@ var InitDemo = function () {
         return;
     }
 
+// Create Buffer
+    var triangleVertices =
+    // X, Y
+    [
+        0.0, 0.5,
+        -0.5, -0.5,
+        0.5, -0.5
+    ];
+
+    var triangleVertexBufferObject = gl.createBuffer();
+    // Active Buffer becomes triangleVertexBuffer
+    gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBufferObject);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.STATIC_DRAW);
+
+    
 };
