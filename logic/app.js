@@ -52,4 +52,15 @@ var InitDemo = function () {
     //         gl_Position : [vertPosition.x, vertPosition.y, 0.0, 1.0]
     //     };
     // };
+
+    // Create Shaders
+    var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+    var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+
+    gl.shaderSource(vertexShader, vertexShaderText);
+    gl.shaderSource(fragmentShader, fragmentShaderText);
+
+    gl.compileShader(vertextShader);
+    gl.compileShader(fragmentShader);
+    
 };
