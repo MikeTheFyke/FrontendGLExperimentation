@@ -13,7 +13,7 @@ var vertexShaderText =
 
 var fragmentShaderText =
 [
-'precision mediump float',
+'precision mediump float;',
 '',
 'void main()',
 '{',
