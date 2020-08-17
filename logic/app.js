@@ -18,7 +18,17 @@ var InitDemo = function () {
     // canvas.height = window.innerHeight;
     // gl.viewport (0,0, window.innerWidth, window.innerHeight);
 
-    gl.clearColor (0.75,0.85,0.8,1.0) // set the color of the paint
+    gl.clearColor (0.75,0.85,0.8,1.0) // set the color of the paint for canvas.
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // paints the defined color : Color Buffer & Depth Buffer etc.
 
+    /// Vertex Shader
+    // function vertexShader(vertPosition, vertColor) {
+    //     return {
+    //         fragColor : vertColor,
+    //         gl_position : [vertPosition.x, vertPosition.y, 0.0, 1.0]
+    //     };
+    // };
+
+
+    
 };
