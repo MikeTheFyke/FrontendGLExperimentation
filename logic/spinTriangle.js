@@ -16,7 +16,7 @@ var vertexShaderText =
 [
 'precision mediump float;',
 '',
-'attribute vec2 vertPosition;',
+'attribute vec3 vertPosition;',
 'attribute vec3, vertColor;',
 'varying vec3 fragColor;',
 'uniform mat4 mWorld;',
@@ -190,17 +190,18 @@ var InitDemo = function () {
     // Tell OpenGL state machine which program should be active.
     gl.useProgram(program);
 
-    var matWorldUnifromLocation = gl.getUnifromLocation(program,'mWorld');
-    var matViewUnifromLocation = gl.getUnifromLocation(program,'mView');
-    var matProjUnifromLocation = gl.getUnifromLocation(program,'mProj');
+    var matWorldUnifromLocation = gl.getUniformLocation(program,'mWorld');
+    var matViewUnifromLocation = gl.getUniformLocation(program,'mView');
+    var matProjUnifromLocation = gl.getUniformLocation(program,'mProj');
 
     var worldMatrix = new Float32Array(16);
     var viewMatrix = new Float32Array(16);
     var projMatrix = new Float32Array(16);
     
-    mat4.identity(worldMatrix);
-    mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning
-    mat4.identity(projMatrix);
+    glMatrix.mat4.identity(worldMatrix);
+    // glMatrix.mat4.lookAt(viewMatrix, [0, 0, -2], [0, 0, 0], [0, 1, 0]); // Camera positioning changed to -2, makes object seem closer.
+    glMatrix.mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning
+    glMatrix.mat4.perspective(projMatrix , glMatrix.glMatrix.toRadian(45), canvas.width / canvas.height, 0.1, 1000.0);
 
     gl.uniformMatrix4fv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
     gl.uniformMatrix4fv(matViewUnifromLocation, gl.FALSE, viewMatrix);
