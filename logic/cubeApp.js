@@ -211,7 +211,7 @@ var InitDemo = function () {
 
     var boxIndexBufferObject = gl.createBuffer();
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, boxIndexBufferObject);
-    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Float32Array(boxIndices), gl.STATIC_DRAW);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(boxIndices), gl.STATIC_DRAW);
 
     var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
  
@@ -289,7 +289,7 @@ var InitDemo = function () {
         gl.clearColor(0.75, 0.85, 0.8, 1.0);
         gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
 
-        gl.drawArrays(gl.TRIANGLES, 0, 3);
+        gl.drawElements(gl.TRIANGLES, boxIndices.length, gl.UNSIGNED_SHORT, 0);
 
         requestAnimationFrame(loop);
     };
