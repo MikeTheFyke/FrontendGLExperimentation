@@ -132,7 +132,7 @@ var InitDemo = function () {
     // ];
 
     // 3 Shaded Triangle
-    var triangleVertices =
+    var boxVertices =
     // X, Y , Z              R,G,B
     [
         //  0.0,  0.5, 0.0,     1.0, 1.0, 0.0,
@@ -173,14 +173,41 @@ var InitDemo = function () {
         -1.0, -1.0, -1.0,         0.5, 0.5, 1.00,
         -1.0, -1.0,  1.0,         0.5, 0.5, 1.00,
          1.0, -1.0,  1.0,         0.5, 0.5, 1.00,
-         1.0, -1.0, -1.0,         0.5, 0.5, 1.00,
+         1.0, -1.0, -1.0,         0.5, 0.5, 1.00
 
+    ];
+
+    var boxIndices =
+    [
+        // Top
+        0, 1, 2,
+        0, 2, 3,
+
+        // Left
+        5, 4, 6,
+        6, 4, 7,
+
+        // Right
+        8,  9,  10,
+        8, 10,  11,
+
+        // Front
+        13, 12, 14,
+        15, 14, 12,
+
+        // Back
+        16, 17, 18,
+        16, 18, 19,
+
+        // Bottom
+        21, 20, 22,
+        22, 20, 23
     ];
 
     var triangleVertexBufferObject = gl.createBuffer();
     // Active Buffer becomes triangleVertexBuffer
     gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBufferObject);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(triangleVertices), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(boxVertices), gl.STATIC_DRAW);
 
     var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
  
@@ -237,7 +264,7 @@ var InitDemo = function () {
     
     glMatrix.mat4.identity(worldMatrix);
     // glMatrix.mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning changed to -5, makes object seem further away.
-    glMatrix.mat4.lookAt(viewMatrix, [0, 0, -2], [0, 0, 0], [0, 1, 0]); // Camera positioning
+    glMatrix.mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning
     glMatrix.mat4.perspective(projMatrix , glMatrix.glMatrix.toRadian(45), canvas.width / canvas.height, 0.1, 1000.0);
 
     gl.uniformMatrix4fv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
