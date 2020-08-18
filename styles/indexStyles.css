@@ -11,3 +11,8 @@
  color: black;
  font-size: 24px;
 }
+
+.canvasContainer{
+    margin: 40px auto 10px auto;
+    width: 900px;
+}
