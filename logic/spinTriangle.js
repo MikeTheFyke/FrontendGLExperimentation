@@ -199,8 +199,8 @@ var InitDemo = function () {
     var projMatrix = new Float32Array(16);
     
     glMatrix.mat4.identity(worldMatrix);
-    // glMatrix.mat4.lookAt(viewMatrix, [0, 0, -2], [0, 0, 0], [0, 1, 0]); // Camera positioning changed to -2, makes object seem closer.
-    glMatrix.mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning
+    // glMatrix.mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning changed to -5, makes object seem further away.
+    glMatrix.mat4.lookAt(viewMatrix, [0, 0, -2], [0, 0, 0], [0, 1, 0]); // Camera positioning
     glMatrix.mat4.perspective(projMatrix , glMatrix.glMatrix.toRadian(45), canvas.width / canvas.height, 0.1, 1000.0);
 
     gl.uniformMatrix4fv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
