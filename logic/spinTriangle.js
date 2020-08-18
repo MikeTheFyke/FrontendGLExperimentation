@@ -133,7 +133,7 @@ var InitDemo = function () {
 
     // 3 Shaded Triangle
     var triangleVertices =
-    // X, Y             R,G,B
+    // X, Y , Z              R,G,B
     [
          0.0,  0.5, 0.0,     1.0, 1.0, 0.0,
         -0.5, -0.5, 0.0,     0.7, 0.0, 1.0,
@@ -163,10 +163,10 @@ var InitDemo = function () {
     // Added next 2 blocks for 3 shades to triangle
     gl.vertexAttribPointer(
         positionAttribLocation, // Attribute Location
-        2, // Number of elements per attribute
+        3, // Number of elements per attribute
         gl.FLOAT, // Type of elements
         gl.FALSE,
-        5 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
+        6 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
         0 // Offset from the beginning of a single vertex to this attribute
     );
 
@@ -175,8 +175,8 @@ var InitDemo = function () {
         3, // Number of elements per attribute
         gl.FLOAT, // Type of elements
         gl.FALSE,
-        5 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
-        2 * Float32Array.BYTES_PER_ELEMENT // Offset from the beginning of a single vertex to this attribute
+        6 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
+        3 * Float32Array.BYTES_PER_ELEMENT // Offset from the beginning of a single vertex to this attribute
     );
 
 
@@ -184,6 +184,19 @@ var InitDemo = function () {
 
     // Added next line to add 3 shades to triangle
     gl.enableVertexAttribArray(colorAttribLocation);
+
+// Set our new Matrices
+    var matWorldUnifromLocation = gl.getUnifromLocation(program,'mWorld');
+    var matViewUnifromLocation = gl.getUnifromLocation(program,'mView');
+    var matProjUnifromLocation = gl.getUnifromLocation(program,'mProj');
+
+    var worldMatrix = new Float32Array(16);
+    var viewMatrix = new Float32Array(16);
+    var projMatrix = new Float32Array(16);
+    
+    mat4.identity(worldMatrix);
+    mat4.identity(viewMatrix);
+    mat4.identity(projMatrix);
 
 // Main Render Loop
     gl.useProgram(program);
