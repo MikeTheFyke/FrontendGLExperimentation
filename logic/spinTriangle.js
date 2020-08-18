@@ -198,6 +198,10 @@ var InitDemo = function () {
     mat4.identity(viewMatrix);
     mat4.identity(projMatrix);
 
+    gl.uniformMatrix4floatv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
+    gl.uniformMatrix4floatv(matViewUnifromLocation, gl.FALSE, viewdMatrix);
+    gl.uniformMatrix4floatv(matProjUnifromLocation, gl.FALSE, projMatrix);
+
 // Main Render Loop
     gl.useProgram(program);
     // 3 Parameters 1. What to draw, 2. How many vertex to skip, 3. How many vertices to draw
