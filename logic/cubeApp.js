@@ -76,6 +76,7 @@ var InitDemo = function () {
 
     gl.clearColor (0.75,0.85,0.8,1.0) // set the color of the paint for canvas.
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); // paints the defined color : Color Buffer & Depth Buffer etc.
+    gl.enable(gl.DEPTH_TEST); // Added Depth test to keep track of drawn sides.
 
     /// Vertex Shader
     // function vertexShader(vertPosition, vertColor) {
