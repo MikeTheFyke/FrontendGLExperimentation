@@ -208,7 +208,23 @@ var InitDemo = function () {
     gl.uniformMatrix4fv(matProjUnifromLocation, gl.FALSE, projMatrix);
 
 // Main Render Loop
-    // 3 Parameters 1. What to draw, 2. How many vertex to skip, 3. How many vertices to draw
-    gl.drawArrays(gl.TRIANGLES, 0, 3);
+
+    var angle = 0;
+    var indentityMatrix = new Float32Array(16);
+    glMatrix.mat4.identity(indentityMatrix);
+
+    var loop = function () {
+        angle = performance.now() / 1000 / 6 * 2 * Math.PI;
+        glMatrix.mat4.rotate(worldMatrix, indentityMatrix, angle, [0, 1, 0]);
+        gl.uniformMatrix4fv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
+        
+        gl.clearColor(0.75, 0.85, 0.8, 1.0);
+        gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
+
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+
+        requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
 
 };
