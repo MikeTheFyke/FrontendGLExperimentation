@@ -21,7 +21,7 @@ var vertexShaderText =
 'varying vec3 fragColor;',
 'uniform mat4 mWorld;',
 'uniform mat4 mView;',
-'unifrom mat4 mProj;',
+'uniform mat4 mProj;',
 '',
 'void main()',
 '{',
@@ -186,6 +186,10 @@ var InitDemo = function () {
     gl.enableVertexAttribArray(colorAttribLocation);
 
 // Set our new Matrices
+
+    // Tell OpenGL state machine which program should be active.
+    gl.useProgram(program);
+
     var matWorldUnifromLocation = gl.getUnifromLocation(program,'mWorld');
     var matViewUnifromLocation = gl.getUnifromLocation(program,'mView');
     var matProjUnifromLocation = gl.getUnifromLocation(program,'mProj');
@@ -195,15 +199,14 @@ var InitDemo = function () {
     var projMatrix = new Float32Array(16);
     
     mat4.identity(worldMatrix);
-    mat4.identity(viewMatrix);
+    mat4.lookAt(viewMatrix, [0, 0, -5], [0, 0, 0], [0, 1, 0]); // Camera positioning
     mat4.identity(projMatrix);
 
-    gl.uniformMatrix4floatv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
-    gl.uniformMatrix4floatv(matViewUnifromLocation, gl.FALSE, viewdMatrix);
-    gl.uniformMatrix4floatv(matProjUnifromLocation, gl.FALSE, projMatrix);
+    gl.uniformMatrix4fv(matWorldUnifromLocation, gl.FALSE, worldMatrix);
+    gl.uniformMatrix4fv(matViewUnifromLocation, gl.FALSE, viewMatrix);
+    gl.uniformMatrix4fv(matProjUnifromLocation, gl.FALSE, projMatrix);
 
 // Main Render Loop
-    gl.useProgram(program);
     // 3 Parameters 1. What to draw, 2. How many vertex to skip, 3. How many vertices to draw
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
