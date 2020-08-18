@@ -204,10 +204,14 @@ var InitDemo = function () {
         22, 20, 23
     ];
 
-    var triangleVertexBufferObject = gl.createBuffer();
-    // Active Buffer becomes triangleVertexBuffer
-    gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexBufferObject);
+    var boxVertexBufferObject = gl.createBuffer();
+    // Active Buffer becomes boxVertexBuffer
+    gl.bindBuffer(gl.ARRAY_BUFFER, boxVertexBufferObject);
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(boxVertices), gl.STATIC_DRAW);
+
+    var boxIndexBufferObject = gl.createBuffer();
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, boxIndexBufferObject);
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Float32Array(boxIndices), gl.STATIC_DRAW);
 
     var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
  
