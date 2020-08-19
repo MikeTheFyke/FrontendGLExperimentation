@@ -46,10 +46,12 @@ var fragmentShaderText =
 [
 'precision mediump float;',
 '',
-'varying vec3 fragColor;',
+'varying vec2 fragTexCoord;',
+'uniform sampler2D sampler;', // Add sampler for Texture Shading // texture 0
+'',
 'void main()',
 '{',
-' gl_FragColor = vec4(fragColor, 1.0);',
+' gl_FragColor = texture2D(sampler, fragTexCoord);',
 '}'
 ].join('\n');
 
