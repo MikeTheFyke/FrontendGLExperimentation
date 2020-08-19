@@ -222,7 +222,7 @@ var InitDemo = function () {
     var positionAttribLocation = gl.getAttribLocation(program, 'vertPosition');
  
     // Added next line to add 3 shades to triangle
-    var colorAttribLocation = gl.getAttribLocation(program, 'vertColor');
+    var texCoordAttribLocation = gl.getAttribLocation(program, 'vertTexCoord');
 
     // For single colored triangle
     // gl.vertexAttribPointer(
@@ -240,16 +240,16 @@ var InitDemo = function () {
         3, // Number of elements per attribute
         gl.FLOAT, // Type of elements
         gl.FALSE,
-        6 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
+        5 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
         0 // Offset from the beginning of a single vertex to this attribute
     );
 
     gl.vertexAttribPointer(
-        colorAttribLocation, // Attribute Location
-        3, // Number of elements per attribute
+        texCoordAttribLocation, // Attribute Location
+        2, // Number of elements per attribute
         gl.FLOAT, // Type of elements
         gl.FALSE,
-        6 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
+        5 * Float32Array.BYTES_PER_ELEMENT,// Size of an individual vertex
         3 * Float32Array.BYTES_PER_ELEMENT // Offset from the beginning of a single vertex to this attribute
     );
 
