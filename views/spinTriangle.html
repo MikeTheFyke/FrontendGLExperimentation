@@ -6,12 +6,17 @@
     <title>WebGL Experimentations - Spin Triangle</title>
 </head>
 <body onload="InitDemo ()">
-    <div id="headerContainer">
-        <a href="../index.html" class="headerLinks">Home</a>
-        <a href="./triangle.html" class="headerLinks">Triangle</a>
-        <a href="./cube.html" class="headerLinks">Cube</a>
-        <a href="./doubleSpinCube.html" class="headerLinks">2XSpin-Cube</a>
-    </div>
+    <ul id="headerContainer">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">WebGL</a>
+                <div class="dropdown-links">
+                    <a href="./triangle.html" class="headerLinks">Triangle</a>
+                    <a href="./cube.html" class="headerLinks">Cube</a>
+                    <a href="./doubleSpinCube.html" class="headerLinks">2X Spin-Cube</a>
+                </div>
+        </li>
+    </ul>
 
     <div class="canvasContainer">
         <canvas id="spin-triangle-canvas" width="800" height="600">
