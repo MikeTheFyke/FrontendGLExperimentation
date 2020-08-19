@@ -253,7 +253,13 @@ var InitDemo = function () {
     gl.enableVertexAttribArray(positionAttribLocation);
 
     // Added next line to add 3 shades to triangle
-    gl.enableVertexAttribArray(colorAttribLocation);
+    gl.enableVertexAttribArray(texCoordAttribLocation);
+
+// Create our texture after loading buffer.
+
+    var boxTexture = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, boxTexture);
+    gl.bindTexture(gl.TEXTURE_2D, null);
 
 // Set our new Matrices
 
