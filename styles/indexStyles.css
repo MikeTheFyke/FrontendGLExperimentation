@@ -15,7 +15,7 @@ li {
     float: left;
 }
 
-.headerLinks, .dropbtn {
+li a, .headerLinks, .dropbtn {
     display: inline-block;
     color: #D3D3D3;
     text-align: center;
