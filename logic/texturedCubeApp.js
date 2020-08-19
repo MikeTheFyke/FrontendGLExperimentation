@@ -57,7 +57,7 @@ var fragmentShaderText =
 var InitDemo = function () {
     console.log('Demo is initializing');
 
-    var canvas = document.getElementById('cube-canvas');
+    var canvas = document.getElementById('textured-cube-canvas');
     var gl = canvas.getContext ('webgl');
 
     if (!gl){
