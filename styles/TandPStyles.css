@@ -1,5 +1,12 @@
 .TandP-CanvasContainer{
     margin: 40px auto 10px auto;
     width: 800px;
-    background-color:red;
+}
+
+#P01-image{
+    display:none;
+}
+
+#T01-image{
+    display:none;
 }
