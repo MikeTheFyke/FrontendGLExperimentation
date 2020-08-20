@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../styles/indexStyles.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="../images/pngegg.png">
+    <title>Canvas Experimentations - Terrance and Phillip</title>
+</head>
+<body onload="InitDemo ()">
+    <ul id="headerContainer">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">WebGL</a>
+                <div class="dropdown-links">
+                    <a href="../triangle.html" class="headerLinks">Triangle</a>
+                    <a href="../spinTriangle.html" class="headerLinks">Spin-Triangle</a>
+                    <a href="../cube.html" class="headerLinks">Cube</a>
+                    <a href="../doubleSpinCube.html" class="headerLinks">2X Spin-Cube</a>
+                    <a href="../texturedCube.html" class="headerLinks">Textured Cube</a>
+                </div>
+        </li>
+    </ul>
+
+    <div class="canvasContainer">
+        <canvas id="TandP-canvas" width="800" height="600">
+            Your Browser does not support HTML5
+        </canvas>
+    </div>
+
+    <br />
+    <i>Demo is above this text</i>
+    <img id="crate-image" src="../images/wooden-crate.svg" width="0" height="0"></img>
+</body>
+    <script src="../logic/canvas/TandP.js"></script>
+</html>
