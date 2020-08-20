@@ -20,32 +20,32 @@ function calculateMousePos(evt){      // an event fires when mouse moves
 
 window.onload = function() {
     setInterval(function() {
-        drawEverything();
+        ctx.drawImage(imgP,400,10)
+        ctx.drawImage(imgT,100,10)
     },1000/framesPerSecond); // Hundredth of seconds
 
-    canvas.addEventListener ('mousemove',   // keypress, mouseclick, mousemove
-      function(evt) {
-            var mousePos = calculateMousePos(evt);
-            Xcord = mousePos.x;
-            Ycord = mousePos.y;
-       }
-    );
-    canvas.addEventListener("click", function(){
+canvas.addEventListener ('mousemove',   // keypress, mouseclick, mousemove
+    function(evt) {
+        var mousePos = calculateMousePos(evt);
+        Xcord = mousePos.x;
+        Ycord = mousePos.y;
+    }
+);
+canvas.addEventListener("click", function(){
+    if (mouseX <= 400){
         TFart();
-    });
+    }
+    if (mouseX >= 401){
+        PFart();
+    }
+});
 }
 
-function drawEverything () {
-    ctx.drawImage(imgP,400,10)
-    ctx.drawImage(imgT,100,10)
-}
 
 function TFart(){
     for (var x = 1; x <= 13; x++){
         ctx.fillStyle = "white";
-        ctx.beginPath()
-        ctx.rect(0,0,800,600);
-        ctx.fill();
+
         imgT = document.getElementById("T" + x + "-fart");
         imgP = document.getElementById("P" + x + "-fart");
         ctx.drawImage(imgP,400,10)
