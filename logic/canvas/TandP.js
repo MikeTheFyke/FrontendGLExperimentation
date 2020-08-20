@@ -19,10 +19,8 @@ function calculateMousePos(evt){      // an event fires when mouse moves
   }
 
 window.onload = function() {
-    setInterval(function() {
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
-    },1000/framesPerSecond); // Hundredth of seconds
 
 canvas.addEventListener ('mousemove',   // keypress, mouseclick, mousemove
     function(evt) {
@@ -44,24 +42,26 @@ canvas.addEventListener("click", function(){
 function TFart(){
     for (var x = 1; x <= 13; x++){
         ctx.fillStyle = "white";
-
+        ctx.beginPath();
+        ctx.fillRect(0,0,800,600);
+        ctx.fill();        
         imgT = document.getElementById("T" + x + "-fart");
         imgP = document.getElementById("P" + x + "-fart");
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
         console.log(x);
     }
+    console.log("Terrance Farted HAHAHA")
 }
 
 function PFart(){
     for (var x = 1; x <= 13; x++){
         ctx.fillStyle = "white";
-
         imgT = document.getElementById("T" + x + "-fart2");
         imgP = document.getElementById("P" + x + "-fart2");
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
         console.log(x);
     }
+    console.log("Phillip Farted HAHAHA")
 }
-
