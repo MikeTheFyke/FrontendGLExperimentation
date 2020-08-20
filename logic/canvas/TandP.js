@@ -16,9 +16,8 @@ function calculateMousePos(evt){      // an event fires when mouse moves
       x:mouseX,   // Object Literal
       y:mouseY    // Object Literal
     };
-  }
+}
 
-window.onload = function() {
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
 
@@ -37,7 +36,7 @@ canvas.addEventListener("click", function(){
         PFart();
     }
 });
-}
+
 
 function TFart(){
     for (var x = 1; x <= 13; x++){
@@ -50,9 +49,20 @@ function TFart(){
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
         console.log(x);
+        sleep(1000);
+        function sleep(milliseconds){
+            var start = new Date().getTime();
+                for (var i = 0; i < 1e7; i ++){
+                    if ((new Date().getTime() - start) > milliseconds){
+                        break;
+                    }
+                }
+        }
     }
-    console.log("Terrance Farted HAHAHA")
+        console.log("Terrance Farted HAHAHA")
 }
+
+
 
 function PFart(){
     for (var x = 1; x <= 13; x++){
