@@ -41,13 +41,24 @@ canvas.addEventListener("click", function(){
 });
 }
 
-
 function TFart(){
     for (var x = 1; x <= 13; x++){
         ctx.fillStyle = "white";
 
         imgT = document.getElementById("T" + x + "-fart");
         imgP = document.getElementById("P" + x + "-fart");
+        ctx.drawImage(imgP,400,10)
+        ctx.drawImage(imgT,100,10)
+        console.log(x);
+    }
+}
+
+function PFart(){
+    for (var x = 1; x <= 13; x++){
+        ctx.fillStyle = "white";
+
+        imgT = document.getElementById("T" + x + "-fart2");
+        imgP = document.getElementById("P" + x + "-fart2");
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
         console.log(x);
