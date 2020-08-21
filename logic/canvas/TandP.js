@@ -49,15 +49,6 @@ function TFart(){
         ctx.drawImage(imgP,400,10)
         ctx.drawImage(imgT,100,10)
         console.log(x);
-        sleep(1000);
-        function sleep(milliseconds){
-            var start = new Date().getTime();
-                for (var i = 0; i < 1e7; i ++){
-                    if ((new Date().getTime() - start) > milliseconds){
-                        break;
-                    }
-                }
-        }
     }
         console.log("Terrance Farted HAHAHA")
 }

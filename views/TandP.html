@@ -33,6 +33,10 @@
         </canvas>
     </div>
 
+    <div id="TandP-Buttons">
+        <button onclick="Tfarting()"> <img id="TfartingButt" src="../images/canvas/T01.png"></button>
+        <button onclick="Pfarting()"> <img id="PfartingButt"  src="../images/canvas/P01.png"></button>
+    </div>
 
     <img id="P01-image" src="../images/canvas/P01.png" ></img>
     <img id="T01-image" src="../images/canvas/T01.png" ></img>
@@ -92,4 +96,18 @@
     <img class="fartFrames" id="P13-fart2" src="../images/canvas/PFartFrames/P---Fart-P13.png" ></img>
 </body>
     <script src="../logic/canvas/TandP.js"></script>
+    <script>
+        function Tfarting () {
+            var Tbutt = document.getElementById('TfartingButt');
+            Tbutt.src = "../images/canvas/T-Fart-T.gif";
+            var Pbutt = document.getElementById('PfartingButt');
+            Pbutt.src = "../images/canvas/T-Fart-P.gif";
+        }
+        function Pfarting () {
+            var Tbutt = document.getElementById('TfartingButt');
+            Tbutt.src = "../images/canvas/P-Fart-T.gif";
+            var Pbutt = document.getElementById('PfartingButt');
+            Pbutt.src = "../images/canvas/P-Fart-P.gif";
+        }
+    </script>
 </html>
