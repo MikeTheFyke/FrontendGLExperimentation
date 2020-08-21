@@ -8,7 +8,7 @@
 </head>
 <body>
     <ul id="headerContainer">
-        <li><a href=".../index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">WebGL</a>
                 <div class="dropdown-links">
@@ -28,7 +28,7 @@
         </li>
     </ul>
 
-    <div id="TandP-Buttons">
+    <div id="TandP-Buttons-Container">
         <button onclick="Tfarting()"> <img id="TfartingButt" src="../images/canvas/T01.png"></button>
         <button onclick="Pfarting()"> <img id="PfartingButt"  src="../images/canvas/P01.png"></button>
     </div>
@@ -37,7 +37,6 @@
     <img id="T01-image" src="../images/canvas/T01.png" ></img>
 
 </body>
-    <script src="../logic/canvas/TandP.js"></script>
     <script>
         function Tfarting () {
             var Tbutt = document.getElementById('TfartingButt');
