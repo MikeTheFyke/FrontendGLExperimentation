@@ -29,8 +29,8 @@
     </ul>
 
     <div id="TandP-Buttons-Container">
-        <button class="TandP-Buttons" onclick="Tfarting()"> <img id="TfartingButt" src="../images/canvas/T01.png"></button>
-        <button class="TandP-Buttons" onclick="Pfarting()"> <img id="PfartingButt"  src="../images/canvas/P01.png"></button>
+        <button class="TandP-Buttons" onclick="Tfarting(); newFart.play()"> <img id="TfartingButt" src="../images/canvas/T01.png"></button>
+        <button class="TandP-Buttons" onclick="Pfarting(); newFart.play()"> <img id="PfartingButt"  src="../images/canvas/P01.png"></button>
     </div>
 
     <img id="P01-image" src="../images/canvas/P01.png" ></img>
@@ -38,19 +38,32 @@
 
 </body>
     <script>
-        var fart1 = new Audio();
-        var fart2 = new Audio();
 
-        fart1.src = "../sounds/dry-fart.mp3";
-        fart2.src = "../sounds/wet-fart_1.mp3";
+        var newFart = new Audio();
 
         function Tfarting () {
+            var fartRandom = Math.floor(Math.random() * 2) + 1;
+            console.log(fartRandom);
+            if (fartRandom === 1){
+                newFart.src = "../sounds/dry-fart.mp3";
+            }
+            else if (fartRandom === 2){
+                newFart.src = "../sounds/wet-fart_1.mp3";
+            }
             var Tbutt = document.getElementById('TfartingButt');
             Tbutt.src = "../images/canvas/T-Fart-T.gif";
             var Pbutt = document.getElementById('PfartingButt');
             Pbutt.src = "../images/canvas/T-Fart-P.gif";
         }
         function Pfarting () {
+            var fartRandom = Math.floor(Math.random() * 2) + 1;
+            console.log(fartRandom);
+            if (fartRandom === 1){
+                newFart.src = "../sounds/dry-fart.mp3";
+            }
+            else if (fartRandom === 2){
+                newFart.src = "../sounds/wet-fart_1.mp3";
+            }
             var Tbutt = document.getElementById('TfartingButt');
             Tbutt.src = "../images/canvas/P-Fart-T.gif";
             var Pbutt = document.getElementById('PfartingButt');
