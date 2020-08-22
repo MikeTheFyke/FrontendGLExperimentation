@@ -28,6 +28,7 @@ var mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
-light.position.set();
+light.position.set(10,0,25);
+scene.add(light);
 
 renderer.render(scene, camera);
