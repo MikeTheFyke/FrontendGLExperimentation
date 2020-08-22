@@ -34,3 +34,10 @@ light.position.set(10,0,25);
 scene.add(light);
 
 renderer.render(scene, camera);
+
+var render = function () { // Fixes rendering issues when browser frame is resized
+    requestAnimationFrame(render);
+    renderer.render(scene, camera);
+}
+
+render();
