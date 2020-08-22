@@ -27,9 +27,8 @@ var mesh = new THREE.Mesh(geometry, material);
 
 // mesh.position.x = 2; // repositions x cord compared to camera view, y and z can also be repositoned.
                      // repositions move from center of camera.
-mesh.position.set(2,2,-2); // our position can be set all in one line                     
-
-
+// mesh.position.set(2,2,-2); // our position can be set all in one line                     
+mesh.rotation.set(45,0,0); // rotation can also be set in much the same way
 
 scene.add(mesh);
 
