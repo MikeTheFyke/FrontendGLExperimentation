@@ -22,3 +22,8 @@ renderer.render(scene, camera);
 
 // Geometry or form of the object + Material of object
 var geometry = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
+var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+
+var mesh = new THREE.Mesh(geometry, material);
+
+scene.add(mesh);
