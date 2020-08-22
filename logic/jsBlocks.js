@@ -20,3 +20,5 @@ window.addEventListener('resize', () => {
 
 renderer.render(scene, camera);
 
+// Geometry or form of the object + Material of object
+var geometry = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
