@@ -51,5 +51,8 @@ var render = function () { // Fixes rendering issues when browser frame is resiz
 render();
 
 // implementing GSAP
-this.tl = new TimelineMax ().delay(.3);
-this.tl.to(this.mesh.scale, 1, {x:2, ease: Expo.Easeout})
+this.tl = new TimelineMax ().delay(.3); // .3 will create a much smoother animation
+this.tl.to(this.mesh.scale, 1, {x: 2, ease: Expo.Easeout}) // we can add more commands like frames.
+this.tl.to(this.mesh.scale, .5, {x: .5, ease: Expo.Easeout}) 
+this.tl.to(this.mesh.position, .5, {x: 2, ease: Expo.Easeout}) 
+this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
