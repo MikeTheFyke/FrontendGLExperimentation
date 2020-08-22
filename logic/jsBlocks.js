@@ -41,7 +41,9 @@ var render = function () { // Fixes rendering issues when browser frame is resiz
     requestAnimationFrame(render);
 
     mesh.rotation.x += 0.01; // when placed  inside of our render function this will be
-                             // called every frame to create animation.
+                             // called every frame to create animation. Higher the number faster the movement.
+    mesh.rotation.y += 0.01; // plus to the right, minus to the left
+
 
     renderer.render(scene, camera);
 }
