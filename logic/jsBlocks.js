@@ -40,9 +40,9 @@ scene.add(light);
 var render = function () { // Fixes rendering issues when browser frame is resized
     requestAnimationFrame(render);
 
-    mesh.rotation.x += 0.01; // when placed  inside of our render function this will be
+    // mesh.rotation.x += 0.01; // when placed  inside of our render function this will be
                              // called every frame to create animation. Higher the number faster the movement.
-    mesh.rotation.y += 0.01; // plus to the right, minus to the left
+    // mesh.rotation.y += 0.01; // plus to the right, minus to the left
 
 
     renderer.render(scene, camera);
@@ -50,3 +50,6 @@ var render = function () { // Fixes rendering issues when browser frame is resiz
 
 render();
 
+// implementing GSAP
+this.tl = new TimelineMax ().delay(.3);
+this.tl.to(this.mesh.scale, 1, {x:2, ease: Expo.Easeout})
