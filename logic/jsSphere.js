@@ -25,6 +25,8 @@ var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
 
 var mesh = new THREE.Mesh(geometry, material);
 
+mesh.position.x = 2; // repositions x cord compared to camera view
+
 scene.add(mesh);
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance

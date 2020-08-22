@@ -20,10 +20,12 @@ window.addEventListener('resize', () => {
 })
 
 // Geometry or form of the object + Material of object
-var geometry = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
+var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 
 var mesh = new THREE.Mesh(geometry, material);
+
+mesh.position.x = 2; // repositions x cord compared to camera view
 
 scene.add(mesh);
 
