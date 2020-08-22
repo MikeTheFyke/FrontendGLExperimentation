@@ -25,7 +25,9 @@ var material = new THREE.MeshLambertMaterial({color: 0xFFCC00});
 
 var mesh = new THREE.Mesh(geometry, material);
 
-mesh.position.x = 2; // repositions x cord compared to camera view
+// mesh.position.x = 2; // repositions x cord compared to camera view, y and z can also be repositoned.
+                     // repositions move from center of camera.
+mesh.position.set(2,2,-2);
 
 scene.add(mesh);
 
@@ -33,11 +35,10 @@ var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity
 light.position.set(10,0,25);
 scene.add(light);
 
-renderer.render(scene, camera);
-
 var render = function () {  // Fixes rendering issues when browser frame is resized
     requestAnimationFrame(render);
     renderer.render(scene, camera);
 }
 
 render();
+
