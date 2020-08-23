@@ -71,6 +71,19 @@ function onMouseMove (event){ // To move accurately define mouse position for an
     }
 }
 
+function onMouseClick (event){
+    event.preventDefault();
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
+    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    var intersects = raycaster.intersectObjects(scene.children, true);
+    for (var i = 0; i < intersects.length; i ++){
+        intersects[i].object.material.color.set(0xff0000);
+    }
+}
+
 render();
 
 // // implementing GSAP
@@ -83,3 +96,4 @@ render();
 // this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
 
 window.addEventListener('mousemove', onMouseMove); // Animation will now after a hover event.
+window.addEventListener('click', onMouseClick); // Change color on mouse click
