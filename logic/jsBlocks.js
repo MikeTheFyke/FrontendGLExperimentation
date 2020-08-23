@@ -27,7 +27,7 @@ var mouse = new THREE.Vector2();
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 
-var mesh = new THREE.Mesh(geometry, material);
+// var mesh = new THREE.Mesh(geometry, material);
 
 // mesh.position.x = 2; // repositions x cord compared to camera view, y and z can also be repositoned.
                      // repositions move from center of camera.
@@ -35,24 +35,35 @@ var mesh = new THREE.Mesh(geometry, material);
 // mesh.rotation.set(45,0,0); // rotation can also be set in much the same way
 // mesh.scale.set(1,2,1); // can be used in conjuction with previous mesh propeties
 
-scene.add(mesh);
+// scene.add(mesh);
 /// Object 1 END ///
 
 /// Object 2 ///
-var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
-var mesh = new THREE.Mesh(geometry, material);
-mesh.position.y = 2;
-scene.add(mesh);
+// var geometry = new THREE.BoxGeometry(1, 1, 1);
+// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+// var mesh = new THREE.Mesh(geometry, material);
+// mesh.position.y = 2;
+// scene.add(mesh);
 /// Object 2 END ///
 
 /// Object 3 ///
-var geometry = new THREE.BoxGeometry(1, 1, 1);
-var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
-var mesh = new THREE.Mesh(geometry, material);
-mesh.position.y = -2;
-scene.add(mesh);
+// var geometry = new THREE.BoxGeometry(1, 1, 1);
+// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+// var mesh = new THREE.Mesh(geometry, material);
+// mesh.position.y = -2;
+// scene.add(mesh);
 /// Object 3 END ///
+
+// Create Random placement for cubes in a loop
+meshX = -10;
+for (var  i = 0; i < 15; i++){
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.x = (Math.random() - 0.5) * 10; 
+    mesh.position.y = (Math.random() - 0.5) * 10;
+    mesh.position.z = (Math.random() - 0.5) * 10;
+    scene.add(mesh);
+    meshX+=1;
+}
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(10,0,25);
