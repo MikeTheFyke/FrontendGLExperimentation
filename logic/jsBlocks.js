@@ -42,7 +42,7 @@ scene.add(mesh);
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 var mesh = new THREE.Mesh(geometry, material);
-mesh.position.y = -2;
+mesh.position.y = 2;
 scene.add(mesh);
 /// Object 2 END ///
 
@@ -50,7 +50,7 @@ scene.add(mesh);
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 var mesh = new THREE.Mesh(geometry, material);
-mesh.position.y = 2;
+mesh.position.y = -2;
 scene.add(mesh);
 /// Object 3 END ///
 
@@ -114,4 +114,4 @@ render();
 // this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
 
 window.addEventListener('mousemove', onMouseMove); // Animation will now after a hover event.
-window.addEventListener('click', onMouseClick); // Change color on mouse click
+window.addEventListener('click', onMouseClick, false); // Change color on mouse click
