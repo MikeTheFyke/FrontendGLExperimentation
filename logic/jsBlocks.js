@@ -25,7 +25,8 @@ var mouse = new THREE.Vector2();
 /// Object 1
 // Geometry or form of the object + Material of object
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
-var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); // Yellow cubes
+var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White Cubes
 
 // var mesh = new THREE.Mesh(geometry, material);
 
@@ -66,7 +67,11 @@ for (var  i = 0; i < 15; i++){
 }
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
-light.position.set(10,0,25);
+light.position.set(0,0,0); //light.position.set(10,0,25)
+scene.add(light);
+
+var light = new THREE.PointLight (0xFFFFFF, 2, 1000); // Color (white), Intensity, Distance
+light.position.set(0,0,25);
 scene.add(light);
 
 var render = function () { // Fixes rendering issues when browser frame is resized
