@@ -19,6 +19,9 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
 })
 
+var raycaster = new THREE.Raycaster(); // Added to specify where click must be performed to activate animation.
+var mouse = new THREE.Vector2();
+
 // Geometry or form of the object + Material of object
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
@@ -59,6 +62,4 @@ this.tl.to(this.mesh.scale, .5, {x: .5, ease: Expo.Easeout})
 this.tl.to(this.mesh.position, .5, {x: 2, ease: Expo.Easeout}) 
 this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
 
-document.body.addEventListener("click", () => { // Animation will now after a click event.
-    this.tl.play();
-})
+window.addEventListener('mousemove', onMouseMove); // Animation will now after a click event.
