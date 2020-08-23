@@ -55,17 +55,31 @@ function onMouseMove (event){ // To move accurately define mouse position for an
     event.preventDefault();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
     mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    var intersects = raycaster.intersectObjects(scene.children, true);
+    for (var i = 0; i < intersects.length; i ++){
+    // implementing GSAP
+
+    // this.tl = new TimelineMax ().delay(.3); // .3 will create a much smoother animation
+    this.tl = new TimelineMax (); // changed to paused to make aniamtion play after an event.
+    this.tl.to(intersects[i].object.scale, 1, {x: 2, ease: Expo.Easeout}) // we can add more commands like frames.
+    this.tl.to(intersects[i].object.scale, .5, {x: .5, ease: Expo.Easeout}) 
+    this.tl.to(intersects[i].object.position, .5, {x: 2, ease: Expo.Easeout}) 
+    this.tl.to(intersects[i].object.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
+    }
 }
 
 render();
 
-// implementing GSAP
+// // implementing GSAP
 
-// this.tl = new TimelineMax ().delay(.3); // .3 will create a much smoother animation
-this.tl = new TimelineMax ({paused: true}); // changed to paused to make aniamtion play after an event.
-this.tl.to(this.mesh.scale, 1, {x: 2, ease: Expo.Easeout}) // we can add more commands like frames.
-this.tl.to(this.mesh.scale, .5, {x: .5, ease: Expo.Easeout}) 
-this.tl.to(this.mesh.position, .5, {x: 2, ease: Expo.Easeout}) 
-this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
+// // this.tl = new TimelineMax ().delay(.3); // .3 will create a much smoother animation
+// this.tl = new TimelineMax ({paused: true}); // changed to paused to make aniamtion play after an event.
+// this.tl.to(this.mesh.scale, 1, {x: 2, ease: Expo.Easeout}) // we can add more commands like frames.
+// this.tl.to(this.mesh.scale, .5, {x: .5, ease: Expo.Easeout}) 
+// this.tl.to(this.mesh.position, .5, {x: 2, ease: Expo.Easeout}) 
+// this.tl.to(this.mesh.rotation, .5, {y: Math.PI * .5, ease: Expo.Easeout}, "=-1.5"); // Addition of attributes outside of object will effect timline of which command occurs.  
 
-window.addEventListener('mousemove', onMouseMove); // Animation will now after a click event.
+window.addEventListener('mousemove', onMouseMove); // Animation will now after a hover event.
