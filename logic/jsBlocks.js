@@ -42,6 +42,7 @@ scene.add(mesh);
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 var mesh = new THREE.Mesh(geometry, material);
+mesh.position.y = -2;
 scene.add(mesh);
 /// Object 2 END ///
 
@@ -49,6 +50,7 @@ scene.add(mesh);
 var geometry = new THREE.BoxGeometry(1, 1, 1);
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
 var mesh = new THREE.Mesh(geometry, material);
+mesh.position.y = 2;
 scene.add(mesh);
 /// Object 3 END ///
 
