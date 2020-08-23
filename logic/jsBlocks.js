@@ -22,6 +22,7 @@ window.addEventListener('resize', () => {
 var raycaster = new THREE.Raycaster(); // Added to specify where click must be performed to activate animation.
 var mouse = new THREE.Vector2();
 
+/// Object 1
 // Geometry or form of the object + Material of object
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
 var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
@@ -35,6 +36,21 @@ var mesh = new THREE.Mesh(geometry, material);
 // mesh.scale.set(1,2,1); // can be used in conjuction with previous mesh propeties
 
 scene.add(mesh);
+/// Object 1 END ///
+
+/// Object 2 ///
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+var mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
+/// Object 2 END ///
+
+/// Object 3 ///
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+var mesh = new THREE.Mesh(geometry, material);
+scene.add(mesh);
+/// Object 3 END ///
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(10,0,25);
@@ -71,7 +87,7 @@ function onMouseMove (event){ // To move accurately define mouse position for an
     }
 }
 
-function onMouseClick (event){
+function onMouseClick (event){ // Change color on mouse click to red.
     event.preventDefault();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
     mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
