@@ -28,31 +28,13 @@ var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White Cubes
 var mesh = new THREE.Mesh(geometry, material);
 mesh.position.set(-2,2,0);
 scene.add(mesh);
-// Create Random placement for cubes in a loop
-// meshX = -10;
-// for (var  i = 0; i < 5; i++){
-//     var mesh = new THREE.Mesh(geometry, material);
-//     mesh.position.x = (Math.random() - 0.5) * 10; 
-//     mesh.position.y = (Math.random() - 0.5) * 10;
-//     mesh.position.z = (Math.random() - 0.5) * 10;
-//     scene.add(mesh);
-//     meshX+=1;
-// }
 
 // Sphere = geometry2, material2, mesh2
-var geometry2 = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
+var geometry2 = new THREE.SphereGeometry(.75, 10, 10); // (Radius, Width Segments, Height Segments)
 var material2 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); 
-
-// Create Random placement for Spheres in a loop
-meshX2 = -10;
-for (var  i = 0; i < 5; i++){
-    var mesh2 = new THREE.Mesh(geometry2, material2);
-    mesh2.position.x = (Math.random() - 0.5) * 10; 
-    mesh2.position.y = (Math.random() - 0.5) * 10;
-    mesh2.position.z = (Math.random() - 0.5) * 10;
-    scene.add(mesh2);
-    meshX2+=1;
-}
+var mesh2 = new THREE.Mesh(geometry2, material2);
+mesh2.position.set(-2,0,0);
+scene.add(mesh2);
 
 // Cone = geometry3, material3, mesh3
 var geometry3 = new THREE.ConeGeometry(1, 5, 12); // (Radius, Width Segments, Height Segments)
