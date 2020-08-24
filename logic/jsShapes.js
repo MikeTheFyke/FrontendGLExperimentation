@@ -22,16 +22,9 @@ window.addEventListener('resize', () => {
 var raycaster = new THREE.Raycaster(); // Added to specify where click must be performed to activate animation.
 var mouse = new THREE.Vector2();
 
-/// Object 1
-// Geometry or form of the object + Material of object
+/// Cube = geometry, material, mesh
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
-// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); // Yellow cubes
 var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White Cubes
-
-// Sphere = geometry2, material2, mesh2
-var geometry2 = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
-var material2 = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
-
 
 // Create Random placement for cubes in a loop
 meshX = -10;
@@ -44,6 +37,10 @@ for (var  i = 0; i < 15; i++){
     meshX+=1;
 }
 
+// Sphere = geometry2, material2, mesh2
+var geometry2 = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
+var material2 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); 
+
 // Create Random placement for Spheres in a loop
 meshX2 = -10;
 for (var  i = 0; i < 15; i++){
@@ -53,6 +50,21 @@ for (var  i = 0; i < 15; i++){
     mesh2.position.z = (Math.random() - 0.5) * 10;
     scene.add(mesh2);
     meshX2+=1;
+}
+
+// Sphere = geometry2, material2, mesh2
+var geometry3 = new THREE.ConeGeometry(1, 5, 12); // (Radius, Width Segments, Height Segments)
+var material3 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); 
+
+// Create Random placement for Spheres in a loop
+meshX3 = -10;
+for (var  i = 0; i < 15; i++){
+    var mesh3 = new THREE.Mesh(geometry3, material3);
+    mesh3.position.x = (Math.random() - 0.5) * 10; 
+    mesh3.position.y = (Math.random() - 0.5) * 10;
+    mesh3.position.z = (Math.random() - 0.5) * 10;
+    scene.add(mesh3);
+    meshX3+=1;
 }
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
