@@ -43,6 +43,7 @@ var mesh3 = new THREE.Mesh(geometry3, material3);
 mesh3.position.set(-2,-2,0);
 scene.add(mesh3);
 
+/// 2nd Collumn
 // Cylinder = geometry4, material4, mesh4
 var geometry4 = new THREE.CylinderGeometry(0.75, 0.75, 1, 32); // (TopRadius, BottomRadius, Height, radialSegments)
 var material4 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
@@ -58,19 +59,27 @@ var mesh5 = new THREE.Mesh(geometry5, material5);
 mesh5.position.set(0,0,0);
 scene.add(mesh5);
 
-// Octahedron = geometry5, material5, mesh5
+// Octahedron = geometry6, material6, mesh6
 var geometry6 = new THREE.OctahedronGeometry(.75, 0); // (Radius, Detail)
 var material6 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
 var mesh6 = new THREE.Mesh(geometry6, material6);
 mesh6.position.set(0,-2,0);
 scene.add(mesh6);
 
+/// 3rd Collumn
 // Torus = geometry7, material7, mesh7
 var geometry7 = new THREE.TorusGeometry(.5, 0.25, 16, 100); // (Radius (from centre to centre of tube), Tube Radius, radialSegments, tubularSegments
 var material7 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
 var mesh7 = new THREE.Mesh(geometry7, material7);
 mesh7.position.set(2,2,0);
 scene.add(mesh7);
+
+// TorusKnot = geometry8, material8, mesh8
+var geometry8 = new THREE.TorusKnotGeometry(.5, 0.15, 100, 16); // (Radius (from centre to centre of tube), TubularSegments, radialSegments, tubularSegments
+var material8 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
+var mesh8 = new THREE.Mesh(geometry8, material8);
+mesh8.position.set(2,0,0);
+scene.add(mesh8);
 
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
