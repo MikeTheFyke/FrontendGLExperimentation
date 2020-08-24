@@ -28,32 +28,12 @@ var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Heigh
 // var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); // Yellow cubes
 var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White Cubes
 
-// var mesh = new THREE.Mesh(geometry, material);
+// Sphere = geometry2, material2, mesh2
+var geometry2 = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
+var material2 = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+var mesh2 = new THREE.Mesh(geometry2, material2);
+scene.add(mesh2);
 
-// mesh.position.x = 2; // repositions x cord compared to camera view, y and z can also be repositoned.
-                     // repositions move from center of camera.
-// mesh.position.set(2,2,-2); // our position can be set all in one line                     
-// mesh.rotation.set(45,0,0); // rotation can also be set in much the same way
-// mesh.scale.set(1,2,1); // can be used in conjuction with previous mesh propeties
-
-// scene.add(mesh);
-/// Object 1 END ///
-
-/// Object 2 ///
-// var geometry = new THREE.BoxGeometry(1, 1, 1);
-// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
-// var mesh = new THREE.Mesh(geometry, material);
-// mesh.position.y = 2;
-// scene.add(mesh);
-/// Object 2 END ///
-
-/// Object 3 ///
-// var geometry = new THREE.BoxGeometry(1, 1, 1);
-// var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
-// var mesh = new THREE.Mesh(geometry, material);
-// mesh.position.y = -2;
-// scene.add(mesh);
-/// Object 3 END ///
 
 // Create Random placement for cubes in a loop
 meshX = -10;
