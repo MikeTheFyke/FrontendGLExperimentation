@@ -82,6 +82,21 @@ for (var  i = 0; i < 5; i++){
     meshX4+=1;
 }
 
+// Dodecahedron = geometry5, material5, mesh5
+var geometry5 = new THREE.DodecahedronGeometry(1, 0); // (Radius, Detail)
+var material5 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+
+// Create Random placement for Dodecahedron in a loop
+meshX5 = -10;
+for (var  i = 0; i < 5; i++){
+    var mesh5 = new THREE.Mesh(geometry5, material5);
+    mesh5.position.x = (Math.random() - 2.5) * 10; 
+    mesh5.position.y = (Math.random() - 0.5) * 10;
+    mesh5.position.z = (Math.random() - 0.5) * 10;
+    scene.add(mesh5);
+    meshX5+=1;
+}
+
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(0,0,0); //light.position.set(10,0,25)
 scene.add(light);
