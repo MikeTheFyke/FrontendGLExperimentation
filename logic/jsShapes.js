@@ -2,7 +2,7 @@
 var scene = new THREE.Scene ();
 
 var camera = new THREE.PerspectiveCamera (75,window.innerWidth/window.innerHeight,0.1,1000);
-camera.position.z = 20; // Lower number will zoom the camera in, higher zoom out
+camera.position.z = 5; // Lower number will zoom the camera in, higher zoom out
 
 var renderer = new THREE.WebGLRenderer ({antialias: true});
 
@@ -25,17 +25,19 @@ var mouse = new THREE.Vector2();
 /// Cube = geometry, material, mesh
 var geometry = new THREE.BoxGeometry(1, 1, 1); // (Radius, Width Segments, Height Segments)
 var material = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White Cubes
-
+var mesh = new THREE.Mesh(geometry, material);
+mesh.position.set(-2,2,0);
+scene.add(mesh);
 // Create Random placement for cubes in a loop
-meshX = -10;
-for (var  i = 0; i < 5; i++){
-    var mesh = new THREE.Mesh(geometry, material);
-    mesh.position.x = (Math.random() - 0.5) * 10; 
-    mesh.position.y = (Math.random() - 0.5) * 10;
-    mesh.position.z = (Math.random() - 0.5) * 10;
-    scene.add(mesh);
-    meshX+=1;
-}
+// meshX = -10;
+// for (var  i = 0; i < 5; i++){
+//     var mesh = new THREE.Mesh(geometry, material);
+//     mesh.position.x = (Math.random() - 0.5) * 10; 
+//     mesh.position.y = (Math.random() - 0.5) * 10;
+//     mesh.position.z = (Math.random() - 0.5) * 10;
+//     scene.add(mesh);
+//     meshX+=1;
+// }
 
 // Sphere = geometry2, material2, mesh2
 var geometry2 = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
