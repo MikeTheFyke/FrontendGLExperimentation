@@ -2,7 +2,7 @@
 var scene = new THREE.Scene ();
 
 var camera = new THREE.PerspectiveCamera (75,window.innerWidth/window.innerHeight,0.1,1000);
-camera.position.z = 5; // Lower number will zoom the camera in, higher zoom out
+camera.position.z = 20; // Lower number will zoom the camera in, higher zoom out
 
 var renderer = new THREE.WebGLRenderer ({antialias: true});
 
@@ -52,19 +52,34 @@ for (var  i = 0; i < 5; i++){
     meshX2+=1;
 }
 
-// Sphere = geometry2, material2, mesh2
+// Cone = geometry3, material3, mesh3
 var geometry3 = new THREE.ConeGeometry(1, 5, 12); // (Radius, Width Segments, Height Segments)
-var material3 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); 
+var material3 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
 
-// Create Random placement for Spheres in a loop
+// Create Random placement for Cones in a loop
 meshX3 = -10;
 for (var  i = 0; i < 5; i++){
     var mesh3 = new THREE.Mesh(geometry3, material3);
-    mesh3.position.x = (Math.random() - 0.5) * 10; 
+    mesh3.position.x = (Math.random() - 0.25) * 10; 
     mesh3.position.y = (Math.random() - 0.5) * 10;
     mesh3.position.z = (Math.random() - 0.5) * 10;
     scene.add(mesh3);
     meshX3+=1;
+}
+
+// Cylinder = geometry4, material4, mesh4
+var geometry4 = new THREE.CylinderGeometry(1, 1, 4, 8); // (TopRadius, BottomRadius, Height, radialSegments)
+var material4 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+
+// Create Random placement for Cylinder in a loop
+meshX4 = -10;
+for (var  i = 0; i < 5; i++){
+    var mesh4 = new THREE.Mesh(geometry4, material4);
+    mesh4.position.x = (Math.random() - 2.5) * 10; 
+    mesh4.position.y = (Math.random() - 0.5) * 10;
+    mesh4.position.z = (Math.random() - 0.5) * 10;
+    scene.add(mesh4);
+    meshX4+=1;
 }
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
