@@ -37,26 +37,18 @@ mesh2.position.set(-2,0,0);
 scene.add(mesh2);
 
 // Cone = geometry3, material3, mesh3
-var geometry3 = new THREE.ConeGeometry(1, 1, 20, 32); // (Radius, Width Segments, Height Segments)
+var geometry3 = new THREE.ConeGeometry(0.75, 1, 20, 32); // (Radius, Height, Width Segments, Height Segments)
 var material3 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
 var mesh3 = new THREE.Mesh(geometry3, material3);
 mesh3.position.set(-2,-2,0);
 scene.add(mesh3);
 
 // Cylinder = geometry4, material4, mesh4
-var geometry4 = new THREE.CylinderGeometry(1, 1, 4, 8); // (TopRadius, BottomRadius, Height, radialSegments)
+var geometry4 = new THREE.CylinderGeometry(0.75, 0.75, 1, 32); // (TopRadius, BottomRadius, Height, radialSegments)
 var material4 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
-
-// Create Random placement for Cylinder in a loop
-meshX4 = -10;
-for (var  i = 0; i < 5; i++){
-    var mesh4 = new THREE.Mesh(geometry4, material4);
-    mesh4.position.x = (Math.random() - 0.5) * 10; 
-    mesh4.position.y = (Math.random() - 0.5) * 10;
-    mesh4.position.z = (Math.random() - 0.5) * 10;
-    scene.add(mesh4);
-    meshX4+=1;
-}
+var mesh4 = new THREE.Mesh(geometry4, material4);
+mesh4.position.set(0,2,0);
+scene.add(mesh4);
 
 // Dodecahedron = geometry5, material5, mesh5
 var geometry5 = new THREE.DodecahedronGeometry(1, 0); // (Radius, Detail)
