@@ -31,7 +31,7 @@ scene.add(mesh);
 
 // Sphere = geometry2, material2, mesh2
 var geometry2 = new THREE.SphereGeometry(.75, 10, 10); // (Radius, Width Segments, Height Segments)
-var material2 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); 
+var material2 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
 var mesh2 = new THREE.Mesh(geometry2, material2);
 mesh2.position.set(-2,0,0);
 scene.add(mesh2);
@@ -45,25 +45,26 @@ scene.add(mesh3);
 
 // Cylinder = geometry4, material4, mesh4
 var geometry4 = new THREE.CylinderGeometry(0.75, 0.75, 1, 32); // (TopRadius, BottomRadius, Height, radialSegments)
-var material4 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+var material4 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
 var mesh4 = new THREE.Mesh(geometry4, material4);
 mesh4.position.set(0,2,0);
 scene.add(mesh4);
 
 // Dodecahedron = geometry5, material5, mesh5
-var geometry5 = new THREE.DodecahedronGeometry(1, 0); // (Radius, Detail)
-var material5 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+var geometry5 = new THREE.DodecahedronGeometry(.75, 0); // (Radius, Detail)
+var material5 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White F7F7F7
 var mesh5 = new THREE.Mesh(geometry5, material5);
-// Create Random placement for Dodecahedron in a loop
-meshX5 = -10;
-for (var  i = 0; i < 5; i++){
-    var mesh5 = new THREE.Mesh(geometry5, material5);
-    mesh5.position.x = (Math.random() - 0.5) * 10; 
-    mesh5.position.y = (Math.random() - 0.5) * 10;
-    mesh5.position.z = (Math.random() - 0.5) * 10;
-    scene.add(mesh5);
-    meshX5+=1;
-}
+var mesh5 = new THREE.Mesh(geometry5, material5);
+mesh5.position.set(0,0,0);
+scene.add(mesh5);
+
+// Octahedron = geometry5, material5, mesh5
+var geometry6 = new THREE.OctahedronGeometry(.75, 0); // (Radius, Detail)
+var material6 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+var mesh6 = new THREE.Mesh(geometry6, material6);
+mesh6.position.set(0,-2,0);
+scene.add(mesh6);
+
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(0,0,0); //light.position.set(10,0,25)
@@ -75,12 +76,6 @@ scene.add(light);
 
 var render = function () { // Fixes rendering issues when browser frame is resized
     requestAnimationFrame(render);
-
-    // mesh.rotation.x += 0.01; // when placed  inside of our render function this will be
-                             // called every frame to create animation. Higher the number faster the movement.
-    // mesh.rotation.y += 0.01; // plus to the right, minus to the left
-
-
     renderer.render(scene, camera);
 }
 
