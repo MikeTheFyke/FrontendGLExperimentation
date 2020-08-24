@@ -81,6 +81,12 @@ var mesh8 = new THREE.Mesh(geometry8, material8);
 mesh8.position.set(2,0,0);
 scene.add(mesh8);
 
+// Icosahedron = geometry9, material9, mesh9
+var geometry9 = new THREE.IcosahedronGeometry(.75, 0); // (Radius, Detail)
+var material9 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White F7F7F7
+var mesh9 = new THREE.Mesh(geometry9, material9);
+mesh9.position.set(2,-2,0);
+scene.add(mesh9);
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(0,0,0); //light.position.set(10,0,25)
