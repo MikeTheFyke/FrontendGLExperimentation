@@ -88,6 +88,23 @@ var mesh9 = new THREE.Mesh(geometry9, material9);
 mesh9.position.set(2,-2,0);
 scene.add(mesh9);
 
+// Text = geometry10, material10, mesh10
+var geometry10 = new THREE.TextGeometry('ThreeJS Shapes', {
+                                        size: 80,
+                                        height: 5,
+                                        curveSegments: 12,
+                                        bevelEnabled: true,
+                                        bevelThickness: 10,
+                                        bevelSize: 8,
+                                        bevelOffset: 0,
+                                        bevelSegments: 5
+                                        }); // (Radius, Detail)
+var material10 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White F7F7F7
+var mesh10 = new THREE.Mesh(geometry10, material10);
+mesh10.position.set(0,3,0);
+scene.add(mesh10);
+
+
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(0,0,0); //light.position.set(10,0,25)
 scene.add(light);
