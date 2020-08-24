@@ -60,7 +60,7 @@ var material3 = new THREE.MeshLambertMaterial({color: 0x003263}); // Blue 003263
 meshX3 = -10;
 for (var  i = 0; i < 5; i++){
     var mesh3 = new THREE.Mesh(geometry3, material3);
-    mesh3.position.x = (Math.random() - 0.25) * 10; 
+    mesh3.position.x = (Math.random() - 0.5) * 10; 
     mesh3.position.y = (Math.random() - 0.5) * 10;
     mesh3.position.z = (Math.random() - 0.5) * 10;
     scene.add(mesh3);
@@ -75,7 +75,7 @@ var material4 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
 meshX4 = -10;
 for (var  i = 0; i < 5; i++){
     var mesh4 = new THREE.Mesh(geometry4, material4);
-    mesh4.position.x = (Math.random() - 2.5) * 10; 
+    mesh4.position.x = (Math.random() - 0.5) * 10; 
     mesh4.position.y = (Math.random() - 0.5) * 10;
     mesh4.position.z = (Math.random() - 0.5) * 10;
     scene.add(mesh4);
@@ -85,12 +85,12 @@ for (var  i = 0; i < 5; i++){
 // Dodecahedron = geometry5, material5, mesh5
 var geometry5 = new THREE.DodecahedronGeometry(1, 0); // (Radius, Detail)
 var material5 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
-
+var mesh5 = new THREE.Mesh(geometry5, material5);
 // Create Random placement for Dodecahedron in a loop
 meshX5 = -10;
 for (var  i = 0; i < 5; i++){
     var mesh5 = new THREE.Mesh(geometry5, material5);
-    mesh5.position.x = (Math.random() - 2.5) * 10; 
+    mesh5.position.x = (Math.random() - 0.5) * 10; 
     mesh5.position.y = (Math.random() - 0.5) * 10;
     mesh5.position.z = (Math.random() - 0.5) * 10;
     scene.add(mesh5);
