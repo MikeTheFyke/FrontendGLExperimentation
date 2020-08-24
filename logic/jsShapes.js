@@ -65,6 +65,13 @@ var mesh6 = new THREE.Mesh(geometry6, material6);
 mesh6.position.set(0,-2,0);
 scene.add(mesh6);
 
+// Torus = geometry7, material7, mesh7
+var geometry7 = new THREE.TorusGeometry(.5, 0.25, 16, 100); // (Radius (from centre to centre of tube), Tube Radius, radialSegments, tubularSegments
+var material7 = new THREE.MeshLambertMaterial({color: 0x990000}); // Red 990000
+var mesh7 = new THREE.Mesh(geometry7, material7);
+mesh7.position.set(2,2,0);
+scene.add(mesh7);
+
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(0,0,0); //light.position.set(10,0,25)
