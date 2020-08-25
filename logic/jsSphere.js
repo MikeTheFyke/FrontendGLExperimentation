@@ -23,16 +23,21 @@ var raycaster = new THREE.Raycaster(); // Added to specify where click must be p
 var mouse = new THREE.Vector2();
 
 // Geometry or form of the object + Material of object
-var geometry = new THREE.SphereGeometry(1, 10, 10); // (Radius, Width Segments, Height Segments)
-var material = new THREE.MeshLambertMaterial({color: 0xFFCC00}); 
+var geometry = new THREE.SphereGeometry(.5, 10, 10); // (Radius, Width Segments, Height Segments)
+var material = new THREE.MeshLambertMaterial({color: 0xFFFFFF}); 
 
-var mesh = new THREE.Mesh(geometry, material);
 
 // mesh.position.x = 2; // repositions x cord compared to camera view, y and z can also be repositoned.
                      // repositions move from center of camera.
-mesh.position.set(2,2,-2);
-
-scene.add(mesh);
+meshX = -10;
+for (var  i = 0; i < 40; i++){
+    var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.x = (Math.random() - 0.5) * 10; 
+    mesh.position.y = (Math.random() - 0.5) * 10;
+    mesh.position.z = (Math.random() - 0.5) * 10;
+    scene.add(mesh);
+    meshX+=1;
+}
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
 light.position.set(10,0,25);
@@ -46,7 +51,7 @@ var render = function () {  // Fixes rendering issues when browser frame is resi
 function onMouseMove (event){ // To move accurately define mouse position for animation
     event.preventDefault();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
-    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
 
