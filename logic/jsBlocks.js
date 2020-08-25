@@ -88,7 +88,7 @@ var render = function () { // Fixes rendering issues when browser frame is resiz
 function onMouseMove (event){ // To move accurately define mouse position for animation
     event.preventDefault();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
-    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
 

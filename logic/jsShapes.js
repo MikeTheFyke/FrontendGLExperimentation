@@ -88,31 +88,13 @@ var mesh9 = new THREE.Mesh(geometry9, material9);
 mesh9.position.set(2,-2,0);
 scene.add(mesh9);
 
-// Text = geometry10, material10, mesh10
-var loader = new THREE.FontLoader();
-var geometry10 = new THREE.TextGeometry('ThreeJS Shapes', {
-                                        font: 'helvetica',
-                                        size: 80,
-                                        height: 5,
-                                        curveSegments: 12,
-                                        bevelEnabled: true,
-                                        bevelThickness: 10,
-                                        bevelSize: 8,
-                                        bevelOffset: 0,
-                                        bevelSegments: 5
-                                        }); // (Radius, Detail)
-var material10 = new THREE.MeshLambertMaterial({color: 0xF7F7F7}); // White F7F7F7
-var textMesh = new THREE.Mesh(geometry10, material10);
-textMesh.position.set(0,3,0);
-scene.add(textMesh);
-
 
 var light = new THREE.PointLight (0xFFFFFF, 1, 500); // Color (white), Intensity, Distance
-light.position.set(0,0,0); //light.position.set(10,0,25)
+light.position.set(0,30,0); //light.position.set(10,0,25)
 scene.add(light);
 
 var light = new THREE.PointLight (0xFFFFFF, 2, 1000); // Color (white), Intensity, Distance
-light.position.set(0,0,25);
+light.position.set(0,10,25);
 scene.add(light);
 
 var render = function () { // Fixes rendering issues when browser frame is resized
@@ -123,7 +105,7 @@ var render = function () { // Fixes rendering issues when browser frame is resiz
 function onMouseMove (event){ // To move accurately define mouse position for animation
     event.preventDefault();
     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
-    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
 
@@ -140,20 +122,18 @@ function onMouseMove (event){ // To move accurately define mouse position for an
     }
 }
 
-function onMouseClick (event){ // Change color on mouse click to red.
-    event.preventDefault();
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
-    mouse.y = (event.clientY / window.innerHeight) * 2 - 1;
+// function onMouseClick (event){ // Change color on mouse click to red.
+//     event.preventDefault();
+//     mouse.x = (event.clientX / window.innerWidth) * 2 - 1; 
+//     mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
 
-    raycaster.setFromCamera(mouse, camera);
+//     raycaster.setFromCamera(mouse, camera);
 
-    var intersects = raycaster.intersectObjects(scene.children, true);
-    for (var i = 0; i < intersects.length; i ++){
-        intersects[i].object.material.color.set(0xff0000);
-    }
-}
-
-render();
+//     var intersects = raycaster.intersectObjects(scene.children, true);
+//     for (var i = 0; i < intersects.length; i ++){
+//         intersects[i].object.material.color.set(0xff0000);
+//     }
+// }
 
 // // implementing GSAP
 
@@ -166,3 +146,5 @@ render();
 
 window.addEventListener('mousemove', onMouseMove); // Animation will now after a hover event.
 // window.addEventListener('click', onMouseClick, false); // Change color on mouse click
+
+render();
