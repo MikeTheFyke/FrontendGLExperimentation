@@ -36,7 +36,7 @@ var geometry = new THREE.TextGeometry( 'Three JS Shapes!', {
 
 } );
 var textMesh = new THREE.Mesh( geometry, material );
-textMesh.position.set(-2,2,0);
+textMesh.position.set(-3,2,0);
 textMesh.rotation.set(0,-0.05,0);
 scene.add( textMesh );
 });
