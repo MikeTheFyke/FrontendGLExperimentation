@@ -1,9 +1,11 @@
 Star[] stars = new Star[800];
 
+public int w  = screen.width;
+
 float speed;
 
 void setup() {
-  size (800, 800);
+  size (w, 800);
   for (int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }

@@ -54,3 +54,11 @@ li.dropdown {
   .dropdown:hover .dropdown-links {
     display: block;
   }
+
+.pro-canvascontainer{
+    width: 100vh;
+}
+
+  .pro-stars-canvas{
+      margin: auto;
+  }
