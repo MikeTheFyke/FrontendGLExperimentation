@@ -3,7 +3,9 @@ let spriteData;
 
 let animation = [];
 
-let chipmunk;
+// let chipmunk; // Single Chipmunk
+
+let chipmunks = [];
 
 function preload(){
     spriteSheet = loadImage('../images/SpriteSheetChipmunk.png');
@@ -18,8 +20,10 @@ function setup(){
         let img = spriteSheet.get(pos.x, pos.y, pos.w, pos.h);
         animation.push(img);
     }
-    chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100
-    console.log(spriteData);
+    // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
+    for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
+        chipmunks[i] = new Sprite(animation, 0, i * 50, 1)
+    }
 }
 
 function draw(){
@@ -27,6 +31,10 @@ function draw(){
     // image(spriteSheet,0,0); // displays all frames
     // image(animation[5],0,0); // displays one at a time
     // image(animation[frameCount % animation.length],0,0); // animation[frameCount % animation.length] displays all frames = ANIMATION! // Modjeo Operator
-    chipmunk.show();
-    chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite
+    for (let chipmunk of chipmunks){
+        chipmunk.show();
+        chipmunk.animate();
+    }
+    // chipmunk.show(); // single Chipmunk
+    // chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite // single Chipmunk
 }
