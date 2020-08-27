@@ -4,7 +4,14 @@ PeasyCam cam;
 
 int dim = 3;
 
-// Top (white), Bottom(Yellow), Right (Red), Left (Orange), Front (Green), Back(Blue)
+final int UPP = 0;
+final int DWN = 1;
+final int RGT = 2;
+final int LFT = 3;
+final int FRT = 4;
+final int BCK = 5;
+
+// Up (white), Down(Yellow), Right (Red), Left (Orange), Front (Green), Back(Blue)
 color[] colors = {
   #FFFFFF, #FFFF00,
   #FF0000, #FFA500,
@@ -40,7 +47,9 @@ void draw() {
    } 
  }
 }
+
 /// Cube
+
 class Cubie {
  PVector pos;
  float len;
@@ -62,31 +71,34 @@ class Cubie {
  float r = len/2;
  
  /// Fixed Z
+ fill(colors[BCK]);
  vertex(-r,-r,-r);
  vertex( r,-r,-r);
  vertex( r, r,-r);
  vertex(-r, r,-r);
-
+fill(colors[LFT]);
  vertex(-r,-r, r);
  vertex( r,-r, r);
  vertex( r, r, r);
  vertex(-r, r, r);
 /// Fixed X
+fill(colors[RGT]);
  vertex(-r,-r,-r);
  vertex(-r, r,-r);
  vertex(-r, r, r);
  vertex(-r,-r, r);
- 
+ fill(colors[RGT]);
  vertex( r,-r,-r);
  vertex( r, r,-r);
  vertex( r, r, r);
  vertex( r,-r, r);
 /// Fixed Y
+fill(colors[DWN]);
  vertex(-r,-r,-r);
  vertex( r,-r,-r);
  vertex( r,-r, r);
  vertex(-r,-r, r);
- 
+ fill(colors[UPP]);
  vertex(-r, r,-r);
  vertex( r, r,-r);
  vertex( r, r, r);
