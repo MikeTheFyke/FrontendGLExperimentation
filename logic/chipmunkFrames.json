@@ -1,6 +1,6 @@
 {
     "frames": [{
-        "names": "sprite-00",
+        "name": "sprite-00",
         "position": {
             "x": 0,
             "y": 0,
@@ -9,7 +9,7 @@
         }
     },
     {
-        "names": "sprite-01",
+        "name": "sprite-01",
         "position": {
             "x": 288,
             "y": 0,
@@ -18,7 +18,7 @@
         }
     },
     {
-        "names": "sprite-02",
+        "name": "sprite-02",
         "position": {
             "x": 0,
             "y": 115.577,
@@ -27,7 +27,7 @@
         }
     },
     {
-        "names": "sprite-03",
+        "name": "sprite-03",
         "position": {
             "x": 288,
             "y": 115.577,
@@ -36,7 +36,7 @@
         }
     },
     {
-        "names": "sprite-04",
+        "name": "sprite-04",
         "position": {
             "x": 0,
             "y": 231.154,
@@ -45,7 +45,7 @@
         }
     },
     {
-        "names": "sprite-05",
+        "name": "sprite-05",
         "position": {
             "x": 288,
             "y": 231.154,
@@ -54,7 +54,7 @@
         }
     },
     {
-        "names": "sprite-06",
+        "name": "sprite-06",
         "position": {
             "x": 0,
             "y": 346.731,
@@ -63,7 +63,7 @@
         }
     },
     {
-        "names": "sprite-07",
+        "name": "sprite-07",
         "position": {
             "x": 288,
             "y": 346.731,
@@ -72,7 +72,7 @@
         }
     },
     {
-        "names": "sprite-08",
+        "name": "sprite-08",
         "position": {
             "x": 0,
             "y": 462.308,
