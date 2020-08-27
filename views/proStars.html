@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="../styles/indexStyles.css" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="../images/pngegg.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
     <title>Processing Experimentations - Stars</title>
 </head>
 <body>
@@ -45,8 +45,8 @@
         </li>
     </ul>
 
-    <div class="pro-canvasContainer"></div>
-        <canvas id="pro-stars-canvas" data-processing-sources="../logic/proStars.pde">
+    <div class="pro-canvasContainer">
+        <canvas id="pro-stars-canvas" data-processing-sources="../logic/proStars.pde" height="800">
             Your Browser does not support HTML5
         </canvas>
     </div>
@@ -54,5 +54,5 @@
     <br />
     <i>Demo is above this text, using Processing</i>
 </body>
-    <script type="application/processing" src="../logic/proStars.pde"></script>
+
 </html>

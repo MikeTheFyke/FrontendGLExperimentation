@@ -55,10 +55,11 @@ li.dropdown {
     display: block;
   }
 
-.pro-canvascontainer{
-    width: 100vh;
+.pro-canvasContainer{
+    display:block;
+    text-align: center;
 }
 
-  .pro-stars-canvas{
-      margin: auto;
-  }
+.pro-stars-canvas{
+    margin: 0px auto;
+}
