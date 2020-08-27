@@ -3,9 +3,10 @@
 <head>
     <link rel="stylesheet" href="../styles/indexStyles.css" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="../images/pngegg.png">
-    <title>WebGL Experimentations - Cube</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+    <title>Processing Experimentations - Stars</title>
 </head>
-<body onload="InitDemo ()">
+<body>
     <ul id="headerContainer">
         <li><a href="../index.html">Home</a></li>
         <li class="dropdown">
@@ -45,7 +46,7 @@
     </ul>
 
     <div class="canvasContainer">
-        <canvas id="pro-stars-canvas" width="800" height="800" data-processing-sources="../logic/starfield.pde">
+        <canvas id="pro-stars-canvas" width="800" height="800" data-processing-sources="../logic/proStars.pde">
             Your Browser does not support HTML5
         </canvas>
     </div>
@@ -53,5 +54,5 @@
     <br />
     <i>Demo is above this text, using Processing</i>
 </body>
-    <script src="../logic/cube2App.js"></script>
+    <script type="application/processing" src="../logic/proStars.pde"></script>
 </html>
