@@ -1,6 +1,6 @@
-import peasy.*;
+///import peasy.*;
 
-PeasyCam cam;
+///PeasyCam cam;
 
 int dim = 3;
 
@@ -22,7 +22,7 @@ Cubie [][][] cube = new Cubie[dim][dim][dim];
 
 void setup (){
  size (600,600, P3D); 
- cam = new PeasyCam(this, 400);
+ ///cam = new PeasyCam(this, 400);
  for (int i = 0; i < dim; i++){
    for (int j = 0; j < dim; j++){
      for (int k = 0; k < dim; k++){
