@@ -45,10 +45,7 @@ function draw(){
         chipmunk.show();
         chipmunk.animate();
     }
-    for (let chipmunkB of chipmunksB){
-        chipmunkB.show();
-        chipmunkB.animate();
-    }
+
     // chipmunk.show(); // single Chipmunk
     // chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite // single Chipmunk
 }
