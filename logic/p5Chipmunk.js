@@ -13,7 +13,7 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(640, 480);
+    createCanvas(840, 480);
     let frames = spriteData.frames;
     for (let i = 0; i < frames.length; i++){
         let pos = frames[i].position; // Find Position of frame
@@ -23,7 +23,7 @@ function setup(){
     // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
     for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
         // chipmunks[i] = new Sprite(animation, 0, i * 50, 1) they run at the same speed
-        chipmunks[i] = new Sprite(animation, 0, i * 50, random(0.1, 1)); // creates multiple random speeds to run
+        chipmunks[i] = new Sprite(animation, -288, i * 50, random(0.5, 1)); // creates multiple random speeds to run
     }
 }
 

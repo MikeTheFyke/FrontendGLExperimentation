@@ -17,5 +17,8 @@ class Sprite {
     animate(){
     this.index += this.speed;
     this.x += this.speed * 5; // speed added to x to create movement from left to right
+    if (this.x > 928){
+        this.x = -288;
+    }
     }
 }
