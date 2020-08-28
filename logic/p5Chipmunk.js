@@ -22,7 +22,8 @@ function setup(){
     }
     // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
     for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
-        chipmunks[i] = new Sprite(animation, 0, i * 50, 1)
+        // chipmunks[i] = new Sprite(animation, 0, i * 50, 1) they run at the same speed
+        chipmunks[i] = new Sprite(animation, 0, i * 50, random(0.1, 1)); // creates multiple random speeds to run
     }
 }
 
