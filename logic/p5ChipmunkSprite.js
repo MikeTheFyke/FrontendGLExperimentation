@@ -11,11 +11,11 @@ class Sprite {
     show() {
         let index = floor(this.index) % this.len; // added to handle unwhole numbers as indices for multiple speeds
         image(this.animation[index],this.x, this.y) // changed to include just index to handle the passed along floored index from above for multiple speeds
-        console.log(index);
         // image(this.animation[this.index % this.len],this.x, this.y) for the same speed this.index is floored to recieve unwhole number indices
     }
 
     animate(){
     this.index += this.speed;
+    this.x += this.speed * 5; // speed added to x to create movement from left to right
     }
 }
