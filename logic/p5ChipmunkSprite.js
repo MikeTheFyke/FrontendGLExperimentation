@@ -1,5 +1,6 @@
 class Sprite {
-    constructor(animation, x, y, speed) { // An object stored within it ...
+    constructor(animation, x, y, speed, windowWidth) { // An object stored within it ...
+        this.windowW = windowWidth;
         this.x = x;
         this.y = y;
         this.animation = animation; // an array of images,
@@ -17,8 +18,8 @@ class Sprite {
     animate(){
     this.index += this.speed;
     this.x += this.speed * 5; // speed added to x to create movement from left to right
-    if (this.x > 928){
-        this.x = -288;
-    }
+        if (this.x > (windowW + 288)){
+            this.x = -288;
+        }
     }
 }
