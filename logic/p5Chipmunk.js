@@ -24,14 +24,14 @@ function setup(){
         animation.push(img);
     }
     // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
-    for (let i = 0; i < 3; i ++){ // Multiple Chipmunks
+    for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
         // chipmunks[i] = new Sprite(animation, 0, i * 50, 1) they run at the same speed
-        chipmunks[i] = new Sprite(animation, -288, i * 20, random(0.75, 1), windowW); // creates multiple random speeds to run
+        chipmunks[i] = new Sprite(animation, -288, i * 20, random(1.25, 2), windowW); // creates multiple random speeds to run
     }
 }
 
 function draw(){
-    background(0);
+    background( '#FFFFFF');
     // image(spriteSheet,0,0); // displays all frames
     // image(animation[5],0,0); // displays one at a time
     // image(animation[frameCount % animation.length],0,0); // animation[frameCount % animation.length] displays all frames = ANIMATION! // Modjeo Operator
