@@ -12,6 +12,32 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 document.body.appendChild(renderer.domElement);
 
+var textOutput = "Three JS Shapes!";
+
+function newText(){
+    textOutput = document.getElementById("ThreeJsInput").value;
+    console.log(textOutput);
+    document.getElementById("ThreeJsInput").value = "";
+
+    var loader = new THREE.FontLoader();
+
+    loader.load( '../fonts/helvetiker_regular.typeface.json', function ( font ) {
+
+        var material = new THREE.MeshPhongMaterial({ color: 0xdddddd });
+
+        var geometry = new THREE.TextGeometry( textOutput, {
+            font: font,
+            size: 0.5,
+            height: 1,
+
+        });
+        
+        var textMesh = new THREE.Mesh( geometry, material );
+        textMesh.position.set(-3,0,0);
+        textMesh.rotation.set(0,-0.05,0);
+        scene.add( textMesh );
+    });
+}
 
 // Allow renderer and camera to adjust dynamically with browser window adjustment
 window.addEventListener('resize', () => {
@@ -29,7 +55,7 @@ loader.load( '../fonts/helvetiker_regular.typeface.json', function ( font ) {
 
 var material = new THREE.MeshPhongMaterial({ color: 0xdddddd });
 
-var geometry = new THREE.TextGeometry( 'Three JS Shapes!', {
+var geometry = new THREE.TextGeometry( textOutput, {
     font: font,
     size: 0.5,
     height: 1,
