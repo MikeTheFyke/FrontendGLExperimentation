@@ -83,3 +83,7 @@ li.dropdown {
     height: 55px;
     font-size: 40px;
 }
+
+#field{
+    display: none;
+}
