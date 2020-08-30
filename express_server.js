@@ -10,6 +10,28 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+/// WebGL
+app.get("/triangle", (req, res) => {
+    res.render("triangle");
+});
+
+app.get("/spinTriangle", (req, res) => {
+    res.render("spinTriangle");
+});
+
+app.get("/cube", (req, res) => {
+    res.render("cube");
+});
+
+app.get("/doubleSpinCube", (req, res) => {
+    res.render("doubleSpinCube");
+});
+
+app.get("/texturedCube", (req, res) => {
+    res.render("texturedCube");
+});
+
+/// 3JS
 app.get("/3jsBlocks", (req, res) => {
     res.render("3jsBlocks");
 });
