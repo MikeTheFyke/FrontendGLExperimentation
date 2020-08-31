@@ -48,6 +48,25 @@ app.get("/3jsText", (req, res) => {
     res.render("3jsText");
 });
 
+/// Canvas
+app.get("/TandP", (req, res) => {
+    res.render("TandP");
+});
+
+app.get("/canvasHouse", (req, res) => {
+    res.render("canvasHouse");
+});
+
+app.get("/canvasHud", (req, res) => {
+    res.render("canvasHud");
+});
+
+/// Animation
+app.get("/aniTandP", (req, res) => {
+    res.render("aniTandP");
+});
+
+
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
 });
