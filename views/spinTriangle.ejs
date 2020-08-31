@@ -6,58 +6,7 @@
     <title>WebGL Experimentations - Spin Triangle</title>
 </head>
 <body onload="InitDemo ()">
-    <ul id="headerContainer">
-        <li><a href="../index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">WebGL</a>
-                <div class="dropdown-links">
-                    <a href="./triangle.html" class="headerLinks">Triangle</a>
-                    <a href="./cube.html" class="headerLinks">Cube</a>
-                    <a href="./doubleSpinCube.html" class="headerLinks">2X Spin-Cube</a>
-                    <a href="./texturedCube.html" class="headerLinks">Textured Cube</a>
-                </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">HTML5 Canvas</a>
-                <div class="dropdown-links">
-                    <a href="./TandP.html" class="headerLinks">T and P</a>
-                    <a href="./canvasHouse.html" class="headerLinks">House</a>
-                    <a href="./canvasHud.html" class="headerLinks">Hud</a>
-                </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Animation</a>
-                <div class="dropdown-links">
-                    <a href="./aniTandP.html" class="headerLinks">T and P</a>
-                </div>
-        </li>
-
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">ThreeJs</a>
-                <div class="dropdown-links">
-                    <a href="./3jsSphere.html" class="headerLinks">Sphere</a>
-                    <a href="./3jsBlocks.html" class="headerLinks">Blocks</a>
-                    <a href="./3jsShapes.html" class="headerLinks">Shapes</a>
-                    <a href="./3jsText.html" class="headerLinks">Text</a>
-                </div>
-        </li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">Processing</a>
-                <div class="dropdown-links">
-                    <a href="./proStars.html" class="headerLinks">Stars</a>
-                    <a href="./proRubix.html" class="headerLinks">Rubix Cube</a>
-                </div>
-        </li>
-        <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn">P5js</a>
-                <div class="dropdown-links">
-                    <a href="./p5Chipmunk.html" class="headerLinks">Chipmunk</a>
-                </div>
-        </li>
-    </ul>
-
+    <%- include ('partials/_header.ejs') %>
     <div class="canvasContainer">
         <canvas id="spin-triangle-canvas" width="800" height="600">
             Your Browser does not support HTML5
