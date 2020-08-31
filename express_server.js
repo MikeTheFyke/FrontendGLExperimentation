@@ -66,7 +66,21 @@ app.get("/aniTandP", (req, res) => {
     res.render("aniTandP");
 });
 
+///Processing
+app.get("/proRubix", (req, res) => {
+    res.render("proRubix");
+});
 
+app.get("/proStars", (req, res) => {
+    res.render("proStars");
+});
+
+/// P5
+app.get("/p5Chipmunk", (req, res) => {
+    res.render("p5Chipmunk");
+});
+
+///
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
 });
