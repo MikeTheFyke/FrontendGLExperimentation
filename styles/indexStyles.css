@@ -64,26 +64,6 @@ li.dropdown {
     margin: 0px auto;
 }
 
-#ThreeJsInputContainer{
-    position: absolute;
-    bottom: 100px;
-    width: 80%;
-    margin: 0px 10%;
-}
-
-#ThreeJsInput{
-    width : 80%;
-    height: 50px;
-    outline: none;
-    font-size: 40px;
-}
-
-#ThreeJsButton{
-    width : 17%;
-    height: 55px;
-    font-size: 40px;
-}
-
 #hudContainer{
     cursor: none;
     text-align:center;
