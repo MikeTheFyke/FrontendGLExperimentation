@@ -9,6 +9,8 @@ body{
     padding: 0;
     overflow: hidden;
     background-color: #404040;
+    display: flex;
+    justify-content: center;
 }
 
 .canvasContainer{
