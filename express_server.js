@@ -65,6 +65,10 @@ app.get("/canvasHud", (req, res) => {
     res.render("canvasHud");
 });
 
+app.get("/canvasWalk", (req, res) => {
+    res.render("canvasWalk");
+});
+
 /// Animation
 app.get("/aniTandP", (req, res) => {
     res.render("aniTandP");
