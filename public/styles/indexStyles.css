@@ -19,6 +19,7 @@ body{
 }
 
 li {
+    margin: auto;
     float: left;
 }
 
