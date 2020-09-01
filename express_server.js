@@ -53,10 +53,6 @@ app.get("/3jsText", (req, res) => {
 });
 
 /// Canvas
-app.get("/TandP", (req, res) => {
-    res.render("TandP");
-});
-
 app.get("/canvasHouse", (req, res) => {
     res.render("canvasHouse");
 });
