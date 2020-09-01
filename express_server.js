@@ -2,9 +2,13 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
+var favicon = require('serve-favicon');
+
 app.set("view engine", "ejs");
 
 app.use(express.static('public'));
+
+app.use(favicon(__dirname + '/public/images/pngegg.png'));
 
 app.get("/", (req, res) => {
     res.render("index");
