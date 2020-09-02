@@ -1,9 +1,22 @@
 var canvas;
-var canvasContext;
+var ctx;
 
 var showingWelcomeBanner = true;
 
 var WelcomeBanner = document.getElementById('welcomeBanner');
+
+window.onload = function() {
+    canvas = document.getElementById('walkCanvas');
+    ctx = canvas.getContext('2d');
+  
+    var framesPerSecond = 30;
+    setInterval(function() {
+        moveEverything ();
+        drawEverything();
+    },1000/framesPerSecond);
+  
+    canvas.addEventListener ('mousedown', handleMouseClick);
+}
 
 function calculateMousePos(evt){      // an event fires when mouse moves
   var rect = canvas.getBoundingClientRect();
@@ -22,19 +35,6 @@ function handleMouseClick(evt){
   }
 }
 
-window.onload = function() {
-  canvas = document.getElementById('walkCanvas');
-  canvasContext = canvas.getContext('2d');
-
-  var framesPerSecond = 30;
-  setInterval(function() {
-  moveEverything ();
-  drawEverything();
-  },1000/framesPerSecond); // Hundredth of seconds, ballX movement
-
-  canvas.addEventListener ('mousedown', handleMouseClick);
-}
-
 function moveEverything() {
   if (showingWelcomeBanner) {
     return;
@@ -42,15 +42,11 @@ function moveEverything() {
 }
 
 function drawEverything() {
-  colorRect(0,0,canvas.width,canvas.height, 'black');       // blanks screen black
+    ctx.fillStyle = "Black";
+    ctx.fillRect(0,0,900,650);
 
-  if (showingWelcomeBanner) {
-    canvasContext.drawImage(WelcomeBanner, 350, 300);
-    return;
-  }
-}
-
-function colorRect(leftX,topY, width,height,drawColor) {
-  canvasContext.fillStyle = drawColor;
-  canvasContext.fillRect(leftX,topY,width,height);
+    if (showingWelcomeBanner) {
+        ctx.drawImage(WelcomeBanner, 350, 300);
+        return;
+    }
 }
