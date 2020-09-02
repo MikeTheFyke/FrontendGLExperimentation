@@ -1,7 +1,7 @@
 var canvas;
 var canvasContext;
 
-var showingWinScreen = true;
+var showingWelcomeBanner = true;
 
 var WelcomeBanner = document.getElementById('welcomeBanner');
 
@@ -17,8 +17,8 @@ function calculateMousePos(evt){      // an event fires when mouse moves
 }
 
 function handleMouseClick(evt){
-  if(showingWinScreen) {
-    showingWinScreen = false;
+  if(showingWelcomeBanner) {
+    showingWelcomeBanner = false;
   }
 }
 
@@ -36,7 +36,7 @@ window.onload = function() {
 }
 
 function moveEverything() {
-  if (showingWinScreen) {
+  if (showingWelcomeBanner) {
     return;
   }
 }
@@ -44,7 +44,7 @@ function moveEverything() {
 function drawEverything() {
   colorRect(0,0,canvas.width,canvas.height, 'black');       // blanks screen black
 
-  if (showingWinScreen) {
+  if (showingWelcomeBanner) {
     canvasContext.drawImage(WelcomeBanner, 350, 300);
     return;
   }
