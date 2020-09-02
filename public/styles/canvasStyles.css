@@ -46,3 +46,13 @@
     border-style: none;
     outline: none;
 }
+
+.walk-CanvasContainer{
+    width: 100vh;
+    text-align: center;
+}
+
+#walkCanvas{
+    margin:10px auto;
+    width: 900px;
+}
