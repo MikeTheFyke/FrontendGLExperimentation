@@ -45,8 +45,6 @@ function drawEverything() {
   colorRect(0,0,canvas.width,canvas.height, 'black');       // blanks screen black
 
   if (showingWinScreen) {
-    canvasContext.fillStyle = 'white';
-    canvasContext.fillText("Welcome Click To Continue",340,500); // text,x,y
     canvasContext.drawImage(WelcomeBanner, 350, 300);
     return;
   }
