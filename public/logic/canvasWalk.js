@@ -3,6 +3,8 @@ var canvasContext;
 
 var showingWinScreen = true;
 
+var WelcomeBanner = document.getElementById('welcomeBanner');
+
 function calculateMousePos(evt){      // an event fires when mouse moves
   var rect = canvas.getBoundingClientRect();
   var root = document.documentElement;
@@ -45,6 +47,7 @@ function drawEverything() {
   if (showingWinScreen) {
     canvasContext.fillStyle = 'white';
     canvasContext.fillText("Welcome Click To Continue",340,500); // text,x,y
+    canvasContext.drawImage(WelcomeBanner, 350, 300);
     return;
   }
 }
