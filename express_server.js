@@ -84,6 +84,11 @@ app.get("/p5Chipmunk", (req, res) => {
     res.render("p5Chipmunk");
 });
 
+/// Gsap
+app.get("/gsapHamburgers", (req, res) => {
+    res.render("gsapHamburgers");
+});
+
 ///
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
