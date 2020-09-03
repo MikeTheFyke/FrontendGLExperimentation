@@ -1,0 +1,1 @@
+gsap.from('.gsap-content', {opacity :0, duration: 1, y: -50});

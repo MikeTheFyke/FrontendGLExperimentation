@@ -1,5 +1,5 @@
 .anim1{
-    font: "montserrat";
+    font-family: 'Montserrat';
 }
 
 #cta{
@@ -9,4 +9,19 @@
     width: 160px;
     height: 50px;
     border-radius: 5px;
+}
+
+aside {
+    background-image: url('../images/Hamburgers - Pig Eating 02.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#CowEating {
+    width: 34%;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+
 }

@@ -7,8 +7,10 @@
     <title>Gsap Experimentations - Hamburgers</title>
 </head>
 <body>
+    <div id="head-container">
     <%- include ('partials/_header.ejs') %>
-
+    </div>
+    
     <main>
         <div class="gsap-content">
             <h1 class="anim1"><span>Who is in the wrong </span><span>with this lunch plan?</span></h1>
@@ -18,10 +20,10 @@
     </main>
 
     <aside>
-        <img src="../images/Hamburgers - Cow Eating.png" alt="CowEating">
+        <img src="../images/Hamburgers - Cow Eating.png" id="CowEating">
     </aside>
-
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-    <script src="gsapHamburgers.js"></script>
+    
+    <script type="module" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../logic/gsapHamburgers.js"></script>
 </body>
 </html>
