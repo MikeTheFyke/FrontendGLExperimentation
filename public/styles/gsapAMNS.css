@@ -1,15 +1,9 @@
 #amns-content {
     height: 100%;
-    margin: 100px 10%;
+    margin: 20px 10%;
     display: grid;
     grid-template-columns: 50% 50%;
     font-family: 'Montserrat';
-}
-
-#amns-container-left{
-    text-align: center;
-    width: 220px;
-    height: 200px;
 }
 
 #amns-container-left-human{
@@ -30,6 +24,7 @@
     text-align: center;
     width: 220px;
     height: 220px;
+    margin: 146px 0px;
 }
 
 #amns-container-left-tahog{
@@ -50,6 +45,7 @@
     text-align: center;
     width: 220px;
     height: 220px;
+    margin: 146px 0px;
 }
 
 #amns-container-right-neckot{
@@ -70,6 +66,7 @@
     text-align: center;
     width: 220px;
     height: 220px;
+    margin: 146px 0px;
 }
 
 #amns-container-right-sapise{
@@ -90,6 +87,7 @@
     text-align: center;
     width: 220px;
     height: 220px;
+    margin: 146px 0px;
 }
 
 .amns-sigil{
