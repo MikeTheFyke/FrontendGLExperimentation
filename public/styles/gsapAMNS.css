@@ -3,3 +3,26 @@
     margin: 0;
 }
 
+.sigil{
+    height: 60%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.avatar1{
+    height: 60%;
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-20%, -70%);
+}
+
+.avatar2{
+    height: 60%;
+    position: absolute;
+    top: 70%;
+    right: 15%;
+    transform: translate(0%, -70%);
+}
