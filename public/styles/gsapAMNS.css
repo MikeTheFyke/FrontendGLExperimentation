@@ -1,27 +1,25 @@
-.content {
+#amns-content {
     height: 100%;
-    margin: auto 0px;
+    margin: 100px 10%;
     display: grid;
-    grid-template-columns: auto 60%;
+    grid-template-columns: 50% 50%;
     font-family: 'Montserrat';
 }
 
-.amns-container-left{
+#amns-container-left{
     text-align: center;
+    width: 220px;
+    height: 200px;
 }
 
-#amns-main-left {
-    margin-left: 20%;
+#amns-container-right-neckot{
+    background-image: url('../images/AMNS/NECKOT-SIGIL.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
-    display: grid;
-    place-content: center;
-}
-
-#amns-main-right {
-    margin-right: 20%;
-    height: 100vh;
-    display: grid;
-    place-content: center;
+    text-align: center;
+    width: 220px;
+    height: 220px;
 }
 
 .amns-sigil{
@@ -31,11 +29,13 @@
     border-radius: 25px;
 }
 
-.amns-content{
-    width: 210px;
+.amns-avatars-right{
+    margin: 80px 140px;
+    height: 300px;
+    width: 300px;
 }
-
 .amns-avatars{
+    margin: 80px 140px;
     height: 200px;
     width: 200px;
 }

@@ -12,25 +12,17 @@
     <%- include ('partials/_header.ejs') %>
     </div>
 
-    <div class="content">
-        <main id="amns-main-left">
-            <div class="amns-container-left">
-                <img class="amns-sigil" src="../images/AMNS/HUMANS-SIGIL.png">
-                <div class="amns-content">
-                    <img class="amns-avatars" src="../images/AMNS/HUMANS-CO.png">
-                    <img class="amns-avatars" src="../images/AMNS/HUMANS-FO.png">
-                </div>
-            </div>
-        </main>
-        <main id="amns-main-right">
-            <div class="amns-container-right">
-                <img class="amns-sigil" src="../images/AMNS/NECKOT-SIGIL.png">
-                <div class="amns-content">
-                    <img class="amns-avatars" src="../images/AMNS/NECKOT.png">
-                </div>
-            </div>
-        </main>
-    </div>
+    <main id="amns-content">
+        <div id="amns-container-left">
+            <img class="amns-sigil" src="../images/AMNS/HUMANS-SIGIL.png">
+            <img class="amns-avatars" src="../images/AMNS/HUMANS-CO.png">
+            <img class="amns-avatars" src="../images/AMNS/HUMANS-FO.png">
+        </div>
+
+        <div id="amns-container-right-neckot">
+            <img class="amns-avatars-right" src="../images/AMNS/NECKOT.png">
+        </div>
+    </main>
 
     <script src="../logic/gsapHamburgers.js"></script>
 </body>
