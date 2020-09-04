@@ -26,3 +26,20 @@
     right: 15%;
     transform: translate(0%, -70%);
 }
+
+
+.sigil2{
+    height: 60%;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.avatar1B{
+    height: 60%;
+    position: absolute;
+    top: 140%;
+    right: 0%;
+    transform: translate(0%, -70%);
+}
