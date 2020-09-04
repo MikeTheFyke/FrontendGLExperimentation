@@ -3,12 +3,35 @@
     margin: 0;
 }
 
-.sigil{
-    height: 60%;
+.section h1{
+    font-size: 64px;
+    font-family: 'Montserrat';
     position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -70%);
+    top: 0%;
+    left: 5%;
+}
+
+.section h2{
+    font-size: 20px;
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 11%;
+    left: 6%;
+}
+
+.section p{
+    font-size: 32px;
+    font-family: 'Montserrat';
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+
+.s1{
+    background-image: url('../images/AMNS/HUMANS-SIGIL.png');
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: center;
 }
 
 .avatar1{
@@ -28,18 +51,18 @@
 }
 
 
-.sigil2{
+.sigil{
     height: 60%;
     position: absolute;
-    top: 140%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -70%);
 }
 
-.avatar1B{
+.avatar2B{
     height: 60%;
     position: absolute;
-    top: 140%;
+    top: 75%;
     right: 0%;
     transform: translate(0%, -70%);
 }
