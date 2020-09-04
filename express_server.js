@@ -89,6 +89,10 @@ app.get("/gsapHamburgers", (req, res) => {
     res.render("gsapHamburgers");
 });
 
+app.get("/gsapAMNS", (req, res) => {
+    res.render("gsapAMNS");
+});
+
 ///
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
