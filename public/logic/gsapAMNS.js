@@ -12,8 +12,9 @@ new fullpage('#fullpage', {
             const avatar1 = document.querySelectorAll('.avatar1');
             const avatar2 = document.querySelectorAll('.avatar2');
 
-            tl.fromTo(sigil, 0.7, {x: '175%'}, {x: '-50%'});
-            tl.fromTo(avatar, 0.7, {x: '-350%'}, {x: '-20%'})
+            tl.fromTo(sigil, 0.5, {x: '175%'}, {x: '-50%'});
+            tl.fromTo(avatar1, 0.5, {x: '-350%'}, {x: '-20%'})
+            tl.fromTo(avatar2, 0.5, {x: '175%'}, {x: '-20%'})
         }
 
         if (destination.index === 1){
@@ -21,7 +22,8 @@ new fullpage('#fullpage', {
             const avatar = document.querySelectorAll('.avatar2B');
 
             tl.fromTo(sigil, 0.7, {x: '175%'}, {x: '-50%'});
-            tl.fromTo(avatar, 0.7, {x: '-350%'}, {x: '-20%'})
+            tl.fromTo(avatar, 0.7, {x: '-350%'}, {x: '-20%'});
         }
+
     }
 });
