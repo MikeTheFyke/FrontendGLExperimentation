@@ -12,8 +12,38 @@
     height: 200px;
 }
 
+#amns-container-left-human{
+    background-image: url('../images/AMNS/HUMANS-SIGIL.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    width: 220px;
+    height: 220px;
+}
+
+#amns-container-left-dabid{
+    background-image: url('../images/AMNS/DABID-SIGIL.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    width: 220px;
+    height: 220px;
+}
+
 #amns-container-right-neckot{
     background-image: url('../images/AMNS/NECKOT-SIGIL.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    width: 220px;
+    height: 220px;
+}
+
+#amns-container-right-valsect{
+    background-image: url('../images/AMNS/VALSECT-SIGIL.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -34,8 +64,9 @@
     height: 300px;
     width: 300px;
 }
-.amns-avatars{
+
+.amns-avatars-left{
     margin: 80px 140px;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
