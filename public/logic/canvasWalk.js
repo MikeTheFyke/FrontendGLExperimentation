@@ -47,7 +47,6 @@ window.onload = function() {
 
     var framesPerSecond = 30;
     setInterval(function() {
-        moveEverything ();
         drawEverything();
     },1000/framesPerSecond);
   
@@ -68,15 +67,10 @@ function calculateMousePos(evt){      // an event fires when mouse moves
 function handleMouseClick(evt){
   if(showingWelcomeBanner) {
     showingWelcomeBanner = false;
+    draw();
   }
 }
 
-function moveEverything() {
-  if (!showingWelcomeBanner) {
-
-    return;
-  }
-}
 
 function drawEverything() {
     ctx.fillStyle = "Black";
@@ -86,4 +80,18 @@ function drawEverything() {
         ctx.drawImage(WelcomeBanner, 350, 300);
         return;
     }
+}
+
+function draw(){
+  background( '#FFFFFF');
+  // image(spriteSheet,0,0); // displays all frames
+  // image(animation[5],0,0); // displays one at a time
+  // image(animation[frameCount % animation.length],0,0); // animation[frameCount % animation.length] displays all frames = ANIMATION! // Modjeo Operator
+  for (let chipmunk of chipmunks){
+      chipmunk.show();
+      chipmunk.animate();
+  }
+
+  // chipmunk.show(); // single Chipmunk
+  // chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite // single Chipmunk
 }
