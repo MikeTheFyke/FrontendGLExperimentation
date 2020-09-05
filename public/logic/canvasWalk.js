@@ -31,14 +31,12 @@ function setup(){
   for (let i = 0; i < frames.length; i++){
       let pos = frames[i].position; // Find Position of frame
       let img = spriteSheet.get(pos.x, pos.y, pos.w, pos.h);
-      let imgB = spriteSheetB.get(pos.x, pos.y, pos.w, pos.h);
       animation.push(img);
-      animationB.push(imgB);
   }
   // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
   for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
       // chipmunks[i] = new Sprite(animation, 0, i * 50, 1) they run at the same speed
-      chipmunks[i] = new Sprite(animation,animationB, -288, windowW + 288, i * 20, random(1.25, 2), random(1.25, 2), windowW); // creates multiple random speeds to run
+      chipmunks[i] = new Sprite(animation, -288, i * 20, random(1.25, 2), windowW); // creates multiple random speeds to run
       // chipmunksB[i] = new Sprite(animationB, -288, i * 20, random(1.25, 2), windowW);
   }
 }
@@ -74,7 +72,8 @@ function handleMouseClick(evt){
 }
 
 function moveEverything() {
-  if (showingWelcomeBanner) {
+  if (!showingWelcomeBanner) {
+
     return;
   }
 }
