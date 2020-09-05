@@ -1,5 +1,5 @@
-var canvas;
-var ctx;
+var canvas = document.getElementById('walkCanvas');
+var ctx = canvas.getContext('2d');
 
 var showingWelcomeBanner = true;
 
@@ -17,18 +17,16 @@ let animationB = [];
 let chipmunks = [];
 let chipmunksB = [];
 
-var windowW;
-var windowH;
+var windowW = canvas.width;
+var windowH = canvas.height;
 
 function preload(){
   spriteSheet = loadImage('../images/SpriteSheetChipmunk.png');
-  spriteSheetB = loadImage('../images/SpriteSheetChipmunkB.png');
   spriteData = loadJSON('../logic/chipmunkFrames.json');
   console.log("Preload has run");
 }
 
 function setup(){
-  createCanvas(windowW, 220);
   let frames = spriteData.frames;
   for (let i = 0; i < frames.length; i++){
       let pos = frames[i].position; // Find Position of frame
@@ -45,12 +43,7 @@ function setup(){
   }
 }
 
-window.onload = function() {
-    canvas = document.getElementById('walkCanvas');
-    ctx = canvas.getContext('2d');
-  
-    windowW = canvas.width;
-    windowH = canvas.height;
+window.onload = function() {  
     console.log("CanvasWidth : " + windowW);
     console.log("CanvasHeight : " + windowH);
 
