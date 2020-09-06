@@ -10,12 +10,10 @@ let spriteSheet;
 let spriteData;
 
 let animation = [];
-let animationB = [];
 
 // let chipmunk; // Single Chipmunk
 
 let chipmunks = [];
-let chipmunksB = [];
 
 var windowW = canvas.width;
 var windowH = canvas.height;
@@ -95,3 +93,5 @@ function draw(){
   // chipmunk.show(); // single Chipmunk
   // chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite // single Chipmunk
 }
+
+//Ren and stimpy 1 10 32
