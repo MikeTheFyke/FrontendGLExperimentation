@@ -75,7 +75,7 @@
     jumping: true,
     height: 144,
     width: 144,
-    x: 0,
+    x: buffer.width/2 - 77,
     y: 40-18,
     x_velocity: 0,
     y_velocity: 0
@@ -93,15 +93,15 @@
     if (controller.up.active && !player.jumping) {
       controller.up.active = false;
       player.jumping = true;
-      player.y_velocity -= 2.5;
+      player.y_velocity -= 10;
     }
     if (controller.left.active) {
       player.animation.change(sprite_sheet.frame_sets[2], 7);
-      player.x_velocity -= 0.05;
+      player.x_velocity -= 0.55;
     }
     if (controller.right.active) {
       player.animation.change(sprite_sheet.frame_sets[1], 7);
-      player.x_velocity += 0.05;
+      player.x_velocity += 0.55;
     }
     if (!controller.left.active && !controller.right.active) {
       player.animation.change(sprite_sheet.frame_sets[0], 20);
