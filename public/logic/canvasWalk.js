@@ -32,7 +32,7 @@
     }
   };
 
-  var buffer, display, controller, player, sprite_sheet, loop, render, resize;
+  var buffer, display, controller, player, sprite_sheet, loop, render;
 
   buffer = document.getElementById('walkCanvas'); // var canvas = document.getElementById('walkCanvas');
   display = buffer.getContext('2d'); // var ctx = canvas.getContext('2d');
@@ -136,12 +136,6 @@
     display.fillRect(0, 0, buffer.width, buffer.height);
     display.strokeStyle = "#8ed0ff";
     display.lineWidth = 10;
-    display.beginPath();
-    display.moveTo(0,0);
-    display.bezierCurveTo(40, 20, 40, 0, 80, 0);
-    display.moveTo(0,0);
-    display.bezierCurveTo(40, 20, 40, 20, 80, 0);
-    display.stroke();
     display.fillStyle = "#009900";
     display.fillRect(0, 645, buffer.width, 4);
 
@@ -149,25 +143,15 @@
     display.drawImage(buffer, 0, 0, buffer.width, buffer.height, 0, 0, buffer.width, buffer.height);
   };
 
-  resize = function() {
 
-    display.canvas.width = document.documentElement.clientWidth - 32;
 
-    if (display.width > document.documentElement.clientHeight) {
-      display.width = document.documentElement.clientHeight;
-    }
-    display.height = display.width * 0.5;
-    display.imageSmoothingEnabled = false;
-  };
-
-  buffer.width = 80;
+  buffer.width = 900;
   buffer.height = 650;
 
-  window.addEventListener("resize", resize);
   window.addEventListener("keydown", controller.keyUpDown);
   window.addEventListener("keyup", controller.keyUpDown);
 
-  resize();
+  
 
   sprite_sheet.image.addEventListener("load", function(event) {
     window.requestAnimationFrame(loop);
