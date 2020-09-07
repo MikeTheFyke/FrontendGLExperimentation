@@ -83,7 +83,7 @@
 
   sprite_sheet = {
 
-    frame_sets:[ [0], [1,2,3,4,5,6,7], [8,9,10,11,12,13,14,15] ],
+    frame_sets:[ [0], [1,2,3,4,5,6,7], [8,9,10,11,12,13,14] ],
     image: new Image()
   };
 
@@ -145,8 +145,8 @@
     display.fillStyle = "#009900";
     display.fillRect(0, 36, buffer.width, 4);
 
-    display.drawImage(sprite_sheet.image, player.animation.frame * SPRITE_SIZE, SPRITE_SIZE, Math.floor(player.x), Math.floor(player.y), SPRITE_SIZE, SPRITE_SIZE);
-    display.drawImage(buffer.canvas, 0, 0, buffer.width, buffer.height, 0, 0, display.width, display.height);
+    display.drawImage(sprite_sheet.image, player.animation.frame * SPRITE_SIZE, 0, SPRITE_SIZE, SPRITE_SIZE, Math.floor(player.x), Math.floor(player.y), SPRITE_SIZE, SPRITE_SIZE);
+    display.drawImage(buffer, 0, 0, buffer.width, buffer.height, 0, 0, buffer.width, buffer.height);
   };
 
   resize = function() {
