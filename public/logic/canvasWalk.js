@@ -1,6 +1,3 @@
-var canvas = document.getElementById('walkCanvas');
-var ctx = canvas.getContext('2d');
-
 var windowW = canvas.width;
 var windowH = canvas.height;
 
@@ -30,5 +27,16 @@ var windowH = canvas.height;
     }
   };
 
-  
+  var buffer, controller, display, loop, player, render, resize, sprite_sheet;
+
+  buffer = document.getElementById('walkCanvas').getContext("2d"); // var canvas = document.getElementById('walkCanvas');
+  display = document.querySelector('walkCanvas').getContext("2d"); // var ctx = canvas.getContext('2d');
+
+  controller = {
+
+      left: { active:false, state:false },
+      right: { active:false, state:false },
+      up: { active:false, state:false },
+
+  }
 })
