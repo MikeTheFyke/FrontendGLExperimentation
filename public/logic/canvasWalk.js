@@ -32,7 +32,7 @@
     }
   };
 
-  var buffer, controller, display, loop, player, render, resize, sprite_sheet;
+  var buffer, display, controller, player, sprite_sheet, loop, render, resize;
 
   buffer = document.getElementById('walkCanvas'); // var canvas = document.getElementById('walkCanvas');
   display = buffer.getContext('2d'); // var ctx = canvas.getContext('2d');
@@ -61,7 +61,7 @@
 
           case 39: // Right key
 
-          if (controller.right.state != key_state) controller.right.state = key_state;
+          if (controller.right.state != key_state) controller.right.active = key_state;
           controller.right.state = key_state;
           break;
         }
@@ -95,11 +95,11 @@
       player.y_velocity -= 2.5;
     }
     if (controller.left.active) {
-      player.animation.change(sprite_sheet.frame_sets[2], 15);
+      player.animation.change(sprite_sheet.frame_sets[2], 7);
       player.x_velocity -= 0.05;
     }
     if (controller.right.active) {
-      player.animation.change(sprite_sheet.frame_sets[1], 15);
+      player.animation.change(sprite_sheet.frame_sets[1], 7);
       player.x_velocity += 0.05;
     }
     if (!controller.left.active && !controller.right.active) {
