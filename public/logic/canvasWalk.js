@@ -1,6 +1,6 @@
 (function() { "use strict";
 
-  const SPRITE_SIZE = 16;
+  const SPRITE_SIZE = 144;
 
   var Animation = function(frame_set, delay){
     this.count = 0;
