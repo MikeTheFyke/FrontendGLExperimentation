@@ -120,8 +120,8 @@
     }
     if (player.x + player.width < 0) {
       player.x = buffer.width;
-    } else if (player.x > buffer.width) {
-      player.x = - player.width;
+    } else if (player.x > buffer.width - player.width) {
+      player.x = buffer.width - player.width;
     }
 
     player.animation.update();
