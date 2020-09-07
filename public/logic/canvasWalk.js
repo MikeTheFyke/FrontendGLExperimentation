@@ -51,6 +51,7 @@
 
           if (controller.left.state != key_state) controller.left.active = key_state;
           controller.left.state = key_state;
+          console.log(player.x);
           break;
 
           case 38: // Up Key
@@ -118,8 +119,8 @@
       player.y = buffer.height - 2 - player.height;
       player.y_velocity = 0;
     }
-    if (player.x + player.width < 0) {
-      player.x = buffer.width;
+    if (player.x  < 0) {
+      player.x = 0;
     } else if (player.x > buffer.width - player.width) {
       player.x = buffer.width - player.width;
     }
