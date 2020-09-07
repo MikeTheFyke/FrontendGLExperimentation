@@ -64,6 +64,22 @@ var windowH = canvas.height;
   };
 
   player = {
-    
-  }
+
+    animation: new Animation(),
+    jumping: true,
+    height: 144,
+    width: 144,
+    x: 0,
+    y: 40-18,
+    x_velocity: 0,
+    y_velocity: 0
+
+  };
+
+  sprite_sheet = {
+
+    frame_sets:[ [0], [1,2,3,4,5,6,7], [8,9,10,11,12,13,14,15] ],
+    image: new Image()
+  };
+
 })
