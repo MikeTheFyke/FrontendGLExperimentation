@@ -38,5 +38,32 @@ var windowH = canvas.height;
       right: { active:false, state:false },
       up: { active:false, state:false },
 
+      keyUpDown: function(event) {
+        var key_state = (event.type == "keydown") ? true:false;
+
+        switch(event.keyCode) {
+          case 37: // Left Key
+
+          if (controller.left.state != key_state) controller.left.active = key_state;
+          controller.left.state = key_state;
+          break;
+
+          case 38: // Up Key
+
+          if (controller.up.state != key_state) controller.up.active = key_state;
+          controller.up.state = key_state;
+          break;
+
+          case 39: // Right key
+
+          if (controller.right.state != key_state) controller.right.state = key_state;
+          controller.right.state = key_state;
+          break;
+        }
+      }
+  };
+
+  player = {
+    
   }
 })
