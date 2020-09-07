@@ -157,6 +157,6 @@
     window.requestAnimationFrame(loop);
   });
 
-  sprite_sheet.image.src = "../images/canvas/FO-SpriteSheet.png";
+  sprite_sheet.image.src = "../images/canvas/FO-SpriteSheet02.png";
 
 }) ();
