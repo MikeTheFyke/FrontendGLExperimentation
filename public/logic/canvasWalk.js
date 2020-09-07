@@ -1,11 +1,16 @@
-var windowW = canvas.width;
-var windowH = canvas.height;
-
 (function() { "use strict";
 
   const SPRITE_SIZE = 16;
 
-  var Animation.prototype = {
+  var Animation = function(frame_set, delay){
+    this.count = 0;
+    this.delay = delay;
+    this.frame = 0;
+    this.frame_index = 0;
+    this.frame_set = frame_set;
+  };
+
+  Animation.prototype = {
 
     change:function(frame_set, delay = 15){
       
@@ -29,8 +34,8 @@ var windowH = canvas.height;
 
   var buffer, controller, display, loop, player, render, resize, sprite_sheet;
 
-  buffer = document.getElementById('walkCanvas').getContext("2d"); // var canvas = document.getElementById('walkCanvas');
-  display = document.querySelector('walkCanvas').getContext("2d"); // var ctx = canvas.getContext('2d');
+  buffer = document.getElementById('walkCanvas'); // var canvas = document.getElementById('walkCanvas');
+  display = buffer.getContext('2d'); // var ctx = canvas.getContext('2d');
 
   controller = {
 
@@ -82,4 +87,92 @@ var windowH = canvas.height;
     image: new Image()
   };
 
-})
+  loop = function(time_stamp) {
+
+    if (controller.up.active && !player.jumping) {
+      controller.up.active = false;
+      player.jumping = true;
+      player.y_velocity -= 2.5;
+    }
+    if (controller.left.active) {
+      player.animation.change(sprite_sheet.frame_sets[2], 15);
+      player.x_velocity -= 0.05;
+    }
+    if (controller.right.active) {
+      player.animation.change(sprite_sheet.frame_sets[1], 15);
+      player.x_velocity += 0.05;
+    }
+    if (!controller.left.active && !controller.right.active) {
+      player.animation.change(sprite_sheet.frame_sets[0], 20);
+    }
+
+    player.y_velocity += 0.25;
+
+    player.x += player.x_velocity;
+    player.y += player.y_velocity;
+    player.x_velocity *= 0.9;
+    player.y_velocity *= 0.9;
+
+    if (player.y + player.height > buffer.height - 2){
+      player.jumping = false;
+      player.y = buffer.height - 2 - player.height;
+      player.y_velocity = 0;
+    }
+    if (player.x + player.width < 0) {
+      player.x = buffer.width;
+    } else if (player.x > buffer.width) {
+      player.x = - player.width;
+    }
+
+    player.animation.update();
+    render();
+    window.requestAnimationFrame(loop);
+
+  };
+
+  render = function() {
+
+    display.fillStyle = "#7ec0ff";
+    display.fillRect(0, 0, buffer.width, buffer.height);
+    display.strokeStyle = "#8ed0ff";
+    display.lineWidth = 10;
+    display.beginPath();
+    display.moveTo(0,0);
+    display.bezierCurveTo(40, 20, 40, 0, 80, 0);
+    display.moveTo(0,0);
+    display.bezierCurveTo(40, 20, 40, 20, 80, 0);
+    display.stroke();
+    display.fillStyle = "#009900";
+    display.fillRect(0, 36, buffer.width, 4);
+
+    display.drawImage(sprite_sheet.image, player.animation.frame * SPRITE_SIZE, SPRITE_SIZE, Math.floor(player.x), Math.floor(player.y), SPRITE_SIZE, SPRITE_SIZE);
+    display.drawImage(buffer.canvas, 0, 0, buffer.width, buffer.height, 0, 0, display.width, display.height);
+  };
+
+  resize = function() {
+
+    display.canvas.width = document.documentElement.clientWidth - 32;
+
+    if (display.width > document.documentElement.clientHeight) {
+      display.width = document.documentElement.clientHeight;
+    }
+    display.height = display.width * 0.5;
+    display.imageSmoothingEnabled = false;
+  };
+
+  buffer.width = 80;
+  buffer.height = 40;
+
+  window.addEventListener("resize", resize);
+  window.addEventListener("keydown", controller.keyUpDown);
+  window.addEventListener("keyup", controller.keyUpDown);
+
+  resize();
+
+  sprite_sheet.image.addEventListener("load", function(event) {
+    window.requestAnimationFrame(loop);
+  });
+
+  sprite_sheet.image.src = "../images/canvas/FO-SpriteSheet.png";
+
+}) ();
