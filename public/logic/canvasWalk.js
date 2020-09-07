@@ -161,7 +161,7 @@
   };
 
   buffer.width = 80;
-  buffer.height = 40;
+  buffer.height = 650;
 
   window.addEventListener("resize", resize);
   window.addEventListener("keydown", controller.keyUpDown);
