@@ -6,6 +6,10 @@ ul{
     display: none;
 }
 
+p{
+    width: 80%;
+}
+
 #title{
     font-size: 32px;
     font-family: "Montserrat";
@@ -31,7 +35,11 @@ ul{
 
 
 .section-canvas{
-    margin-left: 100px;
+    margin-left: 10%;
+    border: 1px solid;
+    border-color: #000000;
+    width: 70%;
+    height: 60%;
 }
 
 #footer-nav{
