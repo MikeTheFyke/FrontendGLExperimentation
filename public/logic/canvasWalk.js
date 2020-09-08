@@ -67,6 +67,7 @@
           break;
         }
       }
+
   };
 
   player = {
@@ -93,7 +94,7 @@
     if (controller.up.active && !player.jumping) {
       controller.up.active = false;
       player.jumping = true;
-      player.y_velocity -= 10;
+      player.y_velocity -= 30;
     }
     if (controller.left.active) {
       player.animation.change(sprite_sheet.frame_sets[2], 7);
@@ -107,7 +108,7 @@
       player.animation.change(sprite_sheet.frame_sets[0], 20);
     }
 
-    player.y_velocity += 0.25;
+    player.y_velocity += 0.95; // gravity strength
 
     player.x += player.x_velocity;
     player.y += player.y_velocity;
