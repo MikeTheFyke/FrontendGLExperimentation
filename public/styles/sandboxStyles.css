@@ -65,14 +65,12 @@ p{
 }
 /* Animation Styles */
 .section-div{
-    margin-left: 10%;
-    margin-right: 30%;
-    border: 1px solid;
-    border-color: #000000;
+    margin-left: 2vw;
+    border-color: transparent;
     width: 70%;
     height: 60%;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .TandP-Buttons{
@@ -89,4 +87,14 @@ p{
 
 #T01-image{
     display:none;
+}
+
+#TfartingButt{
+    width: 260px;
+    height: 450px;
+}
+
+#PfartingButt{
+    width: 260px;
+    height: 450px;
 }
