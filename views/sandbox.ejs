@@ -11,7 +11,7 @@
 </head>
 <body>
     <%- include ('partials/_sandboxHeader.ejs') %>
-
+<main id="preview">
     <section id="s1" class="section s1">
         <h1 class="section-header">WebGL</h1>
         <p>WebGL examples include: Triangle, Spinning Triangle, Spinning Cube, 2X Spinning Cube and Textured Cube.</p>
@@ -53,8 +53,9 @@
         <p>Gsap examples include AMNS species cards and Hamburgers.</p>
         <canvas class="section-canvas" id="section-s3-canvas" height="600" width="900" style="border: 1px solid #000000"></canvas>
     </section>
-
+</main>
     <%- include ('partials/_footer.ejs') %>
+    <script src="../logic/fullpage.min.js"></script>
     <script src="../logic/sandboxLogic.js"></script>
 </body>
 </html>
