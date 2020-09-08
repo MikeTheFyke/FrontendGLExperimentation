@@ -140,7 +140,7 @@
     display.lineWidth = 10;
     display.fillStyle = "#009900";
     display.fillRect(0, 645, buffer.width, 4);
-
+    display.fillRect(0,500,50,10);
     display.drawImage(sprite_sheet.image, player.animation.frame * SPRITE_SIZE, 0, SPRITE_SIZE, SPRITE_SIZE, Math.floor(player.x), Math.floor(player.y), SPRITE_SIZE, SPRITE_SIZE);
     display.drawImage(buffer, 0, 0, buffer.width, buffer.height, 0, 0, buffer.width, buffer.height);
   };
