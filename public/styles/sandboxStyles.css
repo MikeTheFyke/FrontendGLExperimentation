@@ -21,6 +21,13 @@ body {
     background-color: #404040;
 }
 
+.section-header{
+    font-size: 32px;
+    font-family: "Montserrat";
+    color: #000000;
+}
+
+
 .section-canvas{
     margin-left: 100px;
 }
