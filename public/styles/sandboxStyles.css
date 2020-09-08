@@ -63,19 +63,22 @@ li.dropdown {
 
 #footer-nav{
     position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    list-style-type: none;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100px;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #404040;
+    background-color: transparent;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0px;
 }
 
 #footer-nav a{
     font-family: "Montserrat";
-    color: #D3D3D3;
+    color: #404040;
+    text-decoration: none;
     margin: auto;
 }
