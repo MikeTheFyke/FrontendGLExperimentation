@@ -8,6 +8,7 @@ new fullpage('#preview', {
         const description = section.querySelector('p');
 
         const sigil = document.querySelectorAll('.section-canvas');
+        const div = document.querySelectorAll('.section-div');
 
         const tl = new TimelineMax({ delay: 0.5});
         tl.fromTo(title, 0.5, {x: "-50", opacity: 0}, {x: 0, opacity: 1});
@@ -15,6 +16,7 @@ new fullpage('#preview', {
         tl.fromTo(description, 0.5, {y: "50", opacity: 0}, {y: 0, opacity: 1});
 
         tl.fromTo(sigil, 0.5, {x: '-175%'}, {x: '0%'});
+        tl.fromTo(div, 0.5, {x: '-175%'}, {x: '0%'});
         // tl.fromTo(avatar1, 0.5, {x: '-350%'}, {x: '-20%'});
         // tl.fromTo(avatar2, 0.5, {x: '200%'}, {x: '-20%'});
         // tl.fromTo(avatar2B, 0.5, {x: '-350%'}, {x: '-20%'});

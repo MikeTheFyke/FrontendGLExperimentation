@@ -27,7 +27,10 @@
     <section id="s3" class="section s3">
         <h1 class="section-header">Animation</h1>
         <p>Animation examples include Terrance and Phillip.</p>
-        <canvas class="section-canvas" id="section-s3-canvas" height="600" width="900"></canvas>
+        <div class="section-div">
+            <button class="TandP-Buttons" onclick="Tfarting(); newFart.play()"> <img id="TfartingButt" src="../images/canvas/T01.png"></button>
+            <button class="TandP-Buttons" onclick="Pfarting(); newFart.play()"> <img id="PfartingButt"  src="../images/canvas/P01.png"></button>
+        </div>
     </section>
 
     <section id="s4" class="section s4">
@@ -54,8 +57,45 @@
         <canvas class="section-canvas" id="section-s3-canvas" height="600" width="900"></canvas>
     </section>
 </main>
+
+<img id="P01-image" src="../images/canvas/P01.png" ></img>
+<img id="T01-image" src="../images/canvas/T01.png" ></img>
+
     <%- include ('partials/_footer.ejs') %>
     <script src="../logic/fullpage.min.js"></script>
     <script src="../logic/sandboxLogic.js"></script>
+    <script>
+
+var newFart = new Audio();
+
+function Tfarting () {
+    var fartRandom = Math.floor(Math.random() * 2) + 1;
+    console.log(fartRandom);
+    if (fartRandom === 1){
+        newFart.src = "../sounds/dry-fart.mp3";
+    }
+    else if (fartRandom === 2){
+        newFart.src = "../sounds/wet-fart_1.mp3";
+    }
+    var Tbutt = document.getElementById('TfartingButt');
+    Tbutt.src = "../images/canvas/T-Fart-T.gif";
+    var Pbutt = document.getElementById('PfartingButt');
+    Pbutt.src = "../images/canvas/T-Fart-P.gif";
+}
+function Pfarting () {
+    var fartRandom = Math.floor(Math.random() * 2) + 1;
+    console.log(fartRandom);
+    if (fartRandom === 1){
+        newFart.src = "../sounds/dry-fart.mp3";
+    }
+    else if (fartRandom === 2){
+        newFart.src = "../sounds/wet-fart_1.mp3";
+    }
+    var Tbutt = document.getElementById('TfartingButt');
+    Tbutt.src = "../images/canvas/P-Fart-T.gif";
+    var Pbutt = document.getElementById('PfartingButt');
+    Pbutt.src = "../images/canvas/P-Fart-P.gif";
+}
+    </script>
 </body>
 </html>
