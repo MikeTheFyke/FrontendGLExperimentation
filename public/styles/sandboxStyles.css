@@ -60,3 +60,22 @@ li.dropdown {
 .section-canvas{
     margin-left: 100px;
 }
+
+#footer-nav{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #404040;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-nav a{
+    font-family: "Montserrat";
+    color: #D3D3D3;
+    margin: auto;
+}
