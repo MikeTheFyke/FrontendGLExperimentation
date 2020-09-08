@@ -1,60 +1,24 @@
 body {
     margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #title{
     font-size: 32px;
+    font-family: "Montserrat";
+    color: #D3D3D3;
+    text-decoration: none;
+    float: left;
 }
 
 #headerContainer{
     width: 100vw;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #404040;
-    display: flex;
-    justify-content: center;
-}
-
-li {
-    margin: auto;
-    float: left;
-}
-
-li a, .headerLinks, .dropbtn {
-    display: inline-block;
-    color: #D3D3D3;
-    text-align: center;
-    text-decoration: none;
-    font-family: "Montserrat";
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-links {
-    display: none;
+    background-color: transparent;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-links a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    padding: 12px 16px;
-  }
-  
-.dropdown-links a:hover {background-color: #f1f1f1;}
-
-.dropdown:hover .dropdown-links {
-    display: block;
+    top: 0px;
+    left: 0px;
+    background-color: #404040;
 }
 
 .section-canvas{
