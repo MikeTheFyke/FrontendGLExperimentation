@@ -93,6 +93,11 @@ app.get("/gsapAMNS", (req, res) => {
     res.render("gsapAMNS");
 });
 
+/// Sanbox
+app.get("/sandbox", (req, res) => {
+    res.render("sandbox");
+});
+
 ///
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`)
