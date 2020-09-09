@@ -1,7 +1,8 @@
 new fullpage('#preview', {
     autoscrolling: true,
     navigation: true,
-    navigationTooltips: ['WebGL', 'Canvas', 'Animation', 'ThreeJs', 'Processing', 'P5Js', 'Gsap'],
+    // navigationPosition: 'right',
+    // navigationTooltips: ['WebGL', 'Canvas', 'Animation', 'ThreeJs', 'Processing', 'P5Js', 'Gsap'],
     onLeave: (origin, destination, direction) =>{
         const section = destination.item;
         const title = section.querySelector('.section-header');

@@ -6,13 +6,13 @@ p{
     width: 80%;
 }
 
-.fp-sr-only span{
+/* .fp-sr-only span{
     font-family: "Montserrat";
     color: #404040;
-}
+} */
 
 #fp-nav.fp-right {
-    right: 0px;
+    display:  none;
 }
 
 #title{
