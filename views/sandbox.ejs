@@ -3,7 +3,11 @@
 <head>
     <link rel="stylesheet" href="../styles/sandboxStyles.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/png" href="../images/pngegg.png">
@@ -64,38 +68,5 @@
     <%- include ('partials/_footer.ejs') %>
     <script src="../logic/fullpage.min.js"></script>
     <script src="../logic/sandboxLogic.js"></script>
-    <script>
-
-var newFart = new Audio();
-
-function Tfarting () {
-    var fartRandom = Math.floor(Math.random() * 2) + 1;
-    console.log(fartRandom);
-    if (fartRandom === 1){
-        newFart.src = "../sounds/dry-fart.mp3";
-    }
-    else if (fartRandom === 2){
-        newFart.src = "../sounds/wet-fart_1.mp3";
-    }
-    var Tbutt = document.getElementById('TfartingButt');
-    Tbutt.src = "../images/canvas/T-Fart-T.gif";
-    var Pbutt = document.getElementById('PfartingButt');
-    Pbutt.src = "../images/canvas/T-Fart-P.gif";
-}
-function Pfarting () {
-    var fartRandom = Math.floor(Math.random() * 2) + 1;
-    console.log(fartRandom);
-    if (fartRandom === 1){
-        newFart.src = "../sounds/dry-fart.mp3";
-    }
-    else if (fartRandom === 2){
-        newFart.src = "../sounds/wet-fart_1.mp3";
-    }
-    var Tbutt = document.getElementById('TfartingButt');
-    Tbutt.src = "../images/canvas/P-Fart-T.gif";
-    var Pbutt = document.getElementById('PfartingButt');
-    Pbutt.src = "../images/canvas/P-Fart-P.gif";
-}
-    </script>
 </body>
 </html>

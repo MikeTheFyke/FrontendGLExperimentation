@@ -2,18 +2,23 @@ body {
     margin: 0;
 }
 
-ul{
-    display: none;
-}
-
 p{
     width: 80%;
+}
+
+.fp-sr-only span{
+    font-family: "Montserrat";
+    color: #404040;
+}
+
+#fp-nav.fp-right {
+    right: 0px;
 }
 
 #title{
     font-size: 32px;
     font-family: "Montserrat";
-    color: #D3D3D3;
+    color: white;
     text-decoration: none;
     float: left;
 }
@@ -25,6 +30,7 @@ p{
     top: 0px;
     left: 0px;
     background-color: #404040;
+    z-index: 1;
 }
 
 .section-header{
@@ -63,6 +69,7 @@ p{
     text-decoration: none;
     margin: auto;
 }
+
 /* Animation Styles */
 .section-div{
     margin-left: 2vw;
