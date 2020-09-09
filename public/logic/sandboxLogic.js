@@ -550,3 +550,98 @@ function onMouseMove (event){ // To move accurately define mouse position for an
 window.addEventListener('mousemove', onMouseMove); // Animation will now after a hover event.
 
 render();
+
+/// P5
+let spriteSheet;
+let spriteData;
+
+let animation = [];
+let animationB = [];
+
+// let chipmunk; // Single Chipmunk
+
+let chipmunks = [];
+let chipmunksB = [];
+
+var windowW = document.getElementById("section-s6-div").innerWidth;
+preload();
+function preload(){
+    console.log("preload is running");
+    spriteSheet = loadImage('../images/SpriteSheetChipmunk.png');
+    spriteSheetB = loadImage('../images/SpriteSheetChipmunkB.png');
+    spriteData = loadJSON('../logic/chipmunkFrames.json');
+    setup();
+}
+
+function setup(){
+    console.log("Setup is running");
+    var canvas6 = createCanvas(windowW, 220);
+    canvas6.parent('section-s6-div');
+    let frames = spriteData.frames;
+    for (let i = 0; i < frames.length; i++){
+        let pos = frames[i].position; // Find Position of frame
+        let img = spriteSheet.get(pos.x, pos.y, pos.w, pos.h);
+        let imgB = spriteSheetB.get(pos.x, pos.y, pos.w, pos.h);
+        animation.push(img);
+        animationB.push(imgB);
+    }
+    // chipmunk = new Sprite(animation, 100, 100, 1); // new sprite from p5ChipmunkSprite and a speed of 1 // added an x 100 and a y 100 // A single Chipmunk
+    for (let i = 0; i < 5; i ++){ // Multiple Chipmunks
+        // chipmunks[i] = new Sprite(animation, 0, i * 50, 1) they run at the same speed
+        chipmunks[i] = new Sprite(animation,animationB, -288, windowW + 288, i * 20, random(1.25, 2), random(1.25, 2), windowW); // creates multiple random speeds to run
+        // chipmunksB[i] = new Sprite(animationB, -288, i * 20, random(1.25, 2), windowW);
+    }
+}
+
+function draw(){
+    background( '#FFFFFF');
+    // image(spriteSheet,0,0); // displays all frames
+    // image(animation[5],0,0); // displays one at a time
+    // image(animation[frameCount % animation.length],0,0); // animation[frameCount % animation.length] displays all frames = ANIMATION! // Modjeo Operator
+    for (let chipmunk of chipmunks){
+        chipmunk.show();
+        chipmunk.animate();
+    }
+
+    // chipmunk.show(); // single Chipmunk
+    // chipmunk.animate(); // Create a animate and show function in p5ChipmunkSprite // single Chipmunk
+}
+
+class Sprite {
+    constructor(animation, animationB, x, x2, y, speed, speedB, windowWidth) { // An object stored within it ...
+        this.windowW = windowWidth;
+        this.x = x;
+        this.y = y;
+        this.animation = animation; // an array of images,
+        this.len = this.animation.length; // the length of the array,
+        this.speed = speed; // the speed at which to display,
+        this.index = 0; // and the position.
+        this.animationB = animationB;
+        this.x2 = x2;
+        this.speedB = speedB;
+        this.index2 = 0;
+    }
+    
+
+    show() {
+        let index = floor(this.index) % this.len; // added to handle unwhole numbers as indices for multiple speeds
+        let index2 = floor(this.index) % this.len;
+        image(this.animation[index],this.x, this.y) // changed to include just index to handle the passed along floored index from above for multiple speeds
+        // image(this.animation[this.index % this.len],this.x, this.y) for the same speed this.index is floored to recieve unwhole number indices
+        image(this.animationB[index2],this.x2, this.y)
+    }
+
+    animate(){
+    this.index += this.speed;
+    this.index2 += this.speedB;
+    this.x += this.speed * 5; // speed added to x to create movement from left to right
+    this.x2 -= this.speedB * 5;
+        if (this.x > (windowW + 288)){
+            this.x = -288;
+        }
+        if (this.x2 < -288){
+            this.x2 =  windowW + 288;
+        }
+    }
+}
+
