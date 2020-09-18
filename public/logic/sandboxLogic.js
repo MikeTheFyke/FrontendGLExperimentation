@@ -564,6 +564,7 @@ let chipmunks = [];
 let chipmunksB = [];
 
 var windowW = document.getElementById("section-s6-div").innerWidth;
+
 preload();
 function preload(){
     console.log("preload is running");
@@ -576,7 +577,7 @@ function preload(){
 function setup(){
     console.log("Setup is running");
     var canvas6 = createCanvas(windowW, 220);
-    canvas6.parent('section-s6-div');
+    canvas6.parent('#chipmunk-div');
     let frames = spriteData.frames;
     for (let i = 0; i < frames.length; i++){
         let pos = frames[i].position; // Find Position of frame
