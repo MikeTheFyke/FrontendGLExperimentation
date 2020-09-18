@@ -1,0 +1,25 @@
+.content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.gsap-content {
+    width: 60%;
+}
+
+h1 {
+    font-size: 3em;
+    position: relative;
+}
+
+#left-side{
+    width: 20%;    
+    background-color: blue;
+}
+
+#right-side{
+    width: 20%;
+    background-color: red;
+}
