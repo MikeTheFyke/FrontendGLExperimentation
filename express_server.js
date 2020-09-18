@@ -93,6 +93,10 @@ app.get("/gsapAMNS", (req, res) => {
     res.render("gsapAMNS");
 });
 
+app.get("/canadaEh", (req, res) => {
+    res.render("canadaEh");
+});
+
 /// Sanbox
 app.get("/sandbox", (req, res) => {
     res.render("sandbox");
