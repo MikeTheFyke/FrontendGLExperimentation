@@ -15,12 +15,12 @@ h1 {
     width: 20%; 
     height: 100vh;
     float: left;
-    background-color: blue;
+    background-color: #FF0000;
 }
 
 #right-side{
     width: 20%;
     height: 100vh;
     float: right;
-    background-color: red;
+    background-color: #FF0000;
 }
