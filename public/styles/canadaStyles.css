@@ -3,8 +3,6 @@
     width: 100%;
     margin: 0;
     font-family: 'Montserrat';
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
 }
 
 h1 {
@@ -19,11 +17,13 @@ h1 {
 #left-side{
     width: 20%; 
     height: 100%;   
+    float: left;
     background-color: blue;
 }
 
 #right-side{
     width: 20%;
     height: 100%;
+    float: right;
     background-color: red;
 }
