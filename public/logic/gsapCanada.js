@@ -6,14 +6,14 @@ tl.from("#main-content", {y: -50, stagger: .6, opacity: 0})
 tl.from(".subtitleText", {y: -50, stagger: .6, opacity: 0})
 tl.from(".titleText", {y:-150, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#left-text", {x:-250, stagger: .6, opacity:0}, "-=0.5")
-tl.from("#left-title-image", {x:-250, stagger: .6, opacity:0}, "-=0.5")
+tl.from("#NTBTS-Btn", {x:-250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#right-text", {x:250, stagger: .6, opacity:0}, "-=0.5")
 
 // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("NTBTS-Btn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
