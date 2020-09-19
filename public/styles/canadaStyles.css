@@ -50,6 +50,10 @@ h1 {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
 
+.modal-content{
+    text-align: center;
+}
+
 .modal-portraits{
     border-radius: 90px;
     width: 150px;
