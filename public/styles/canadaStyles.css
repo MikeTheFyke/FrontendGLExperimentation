@@ -19,7 +19,7 @@ h1 {
 
 #left-side{
     width: 20%; 
-    height: 100vh;
+    height: 100vw;
     float: left;
     background-color: #FF0000;
     text-align: center;
@@ -33,7 +33,7 @@ h1 {
 
 #right-side{
     width: 20%;
-    height: 100vh;
+    height: 100vw;
     float: right;
     background-color: #FF0000;
 }
