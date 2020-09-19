@@ -11,11 +11,21 @@ h1 {
     text-align: center;
 }
 
+#canadaFlag{
+    margin-top: 100px;
+    width: 150px;
+    height: 150px;
+}
+
 #left-side{
     width: 20%; 
     height: 100vh;
     float: left;
     background-color: #FF0000;
+    text-align: center;
+}
+
+#left-title-image{
 }
 
 #right-side{
@@ -23,10 +33,4 @@ h1 {
     height: 100vh;
     float: right;
     background-color: #FF0000;
-}
-
-#canadaFlag{
-    margin-top: 100px;
-    width: 150px;
-    height: 150px;
 }
