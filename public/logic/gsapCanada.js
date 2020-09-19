@@ -10,7 +10,7 @@ tl.from("#NTBTS-Btn", {x:-250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#right-text", {x:250, stagger: .6, opacity:0}, "-=0.5")
 
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("NTBTS-Modal");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];

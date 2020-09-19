@@ -27,6 +27,8 @@ h1 {
 
 #NTBTS-Btn{
     border-color: transparent;
+    outline: none;
+    margin-top: 10px;
 }
 
 #right-side{
