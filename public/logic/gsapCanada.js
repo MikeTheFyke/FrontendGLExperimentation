@@ -88,7 +88,7 @@ span.onclick = function() {
 var KVSmodal = document.getElementById("KVS-Modal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[3];
+var span = document.getElementsByClassName("close")[4];
 
 // When the user clicks on the button, open the modal
 function KVS() {
@@ -98,4 +98,76 @@ function KVS() {
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   KVSmodal.style.display = "none";
+}
+
+// Letter Kenny
+//
+// Get the modal
+var LKmodal = document.getElementById("LK-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[5];
+
+// When the user clicks on the button, open the modal
+function LK() {
+  LKmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  LKmodal.style.display = "none";
+}
+
+// Terrance and Phillip
+//
+// Get the modal
+var TAPmodal = document.getElementById("TAP-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[6];
+
+// When the user clicks on the button, open the modal
+function TAP() {
+  TAPmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  TAPmodal.style.display = "none";
+}
+
+// Kids In The Hall
+//
+// Get the modal
+var KITHmodal = document.getElementById("KITH-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[7];
+
+// When the user clicks on the button, open the modal
+function KITH() {
+  KITHmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  KITHmodal.style.display = "none";
+}
+
+// Trailer Park Boys
+//
+// Get the modal
+var TPBmodal = document.getElementById("TPB-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[8];
+
+// When the user clicks on the button, open the modal
+function TPB() {
+  TPBmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  TPBmodal.style.display = "none";
 }
