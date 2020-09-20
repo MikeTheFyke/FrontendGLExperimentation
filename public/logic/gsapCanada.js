@@ -8,6 +8,7 @@ tl.from(".titleText", {y:-150, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#left-text", {x:-250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#right-text", {x:250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#NTBTS-Btn", {x:-250, stagger: .6, opacity:0}, "-=0.5")
+tl.from("#profile-Btn", {x:+250, stagger: .6, opacity:0}, "-=2")
 
 
 // Nirvanna The Band The Show Modal
