@@ -9,6 +9,9 @@ tl.from("#left-text", {x:-250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#NTBTS-Btn", {x:-250, stagger: .6, opacity:0}, "-=0.5")
 tl.from("#right-text", {x:250, stagger: .6, opacity:0}, "-=0.5")
 
+
+// Nirvanna The Band The Show Modal
+//
 // Get the modal
 var modal = document.getElementById("NTBTS-Modal");
 
@@ -17,6 +20,24 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 function NTBTS() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// The Bob And Doug Mckenie Show
+//
+// Get the modal
+var modal = document.getElementById("BADMC-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+function BADMC() {
   modal.style.display = "block";
 }
 
