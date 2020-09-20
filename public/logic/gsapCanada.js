@@ -49,10 +49,10 @@ span.onclick = function() {
 // Corner Gas
 //
 // Get the modal
-var CGmodal = document.getElementById("BADMC-Modal");
+var CGmodal = document.getElementById("CG-Modal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[1];
+var span = document.getElementsByClassName("close")[2];
 
 // When the user clicks on the button, open the modal
 function CG() {
