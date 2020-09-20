@@ -63,3 +63,39 @@ function CG() {
 span.onclick = function() {
   CGmodal.style.display = "none";
 }
+
+// Kims Convenience
+//
+// Get the modal
+var KCmodal = document.getElementById("KC-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[3];
+
+// When the user clicks on the button, open the modal
+function KC() {
+  KCmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  KCmodal.style.display = "none";
+}
+
+// Kenny VS Spenny
+//
+// Get the modal
+var KVSmodal = document.getElementById("KVS-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[3];
+
+// When the user clicks on the button, open the modal
+function KVS() {
+  KVSmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  KVSmodal.style.display = "none";
+}
