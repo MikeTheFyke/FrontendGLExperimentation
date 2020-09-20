@@ -31,17 +31,35 @@ span.onclick = function() {
 // The Bob And Doug Mckenie Show
 //
 // Get the modal
-var modal = document.getElementById("BADMC-Modal");
+var BADMCmodal = document.getElementById("BADMC-Modal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close")[1];
 
 // When the user clicks on the button, open the modal
 function BADMC() {
-  modal.style.display = "block";
+  BADMCmodal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  BADMCmodal.style.display = "none";
+}
+
+// Corner Gas
+//
+// Get the modal
+var CGmodal = document.getElementById("BADMC-Modal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[1];
+
+// When the user clicks on the button, open the modal
+function CG() {
+  CGmodal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  CGmodal.style.display = "none";
 }
